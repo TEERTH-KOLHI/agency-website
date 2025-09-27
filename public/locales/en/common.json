@@ -1,0 +1,143 @@
+{
+  "title": "STEAL MY AGENCY",
+  "button": "STEAL MY AGENCY",
+  "welcome": "Welcome to my website!",
+  "students": "⭐⭐⭐⭐⭐ 100+ Students",
+  "heroTitle": "Build a $100k/MRR Agency by Stealing My Agency",
+  "heroSubtitle": "Steal the exact blueprint of a $150k/mrr agency PracticePhD.\nSteal our scripts, SOPs, fulfillment, ads, snapshots, and more!",
+  "feature1": "Scripts & Templates",
+  "feature2": "Agency SOPs",
+  "feature3": "Proven Ads",
+  "feature4": "Client Snapshots",
+  "feature5": "Growth Hacks",
+  "feature6": "Private Community",
+  "consistency": "Consistency",
+  "quality": "Quality",
+  "reliability": "Reliability",
+  "transparency": "Transparency",
+  "howToPlayTitle": "How To Play This  Game?",
+
+  "classroomTitle": "Classroom",
+  "classroomText": "The full blueprint of a $150k/month agency. Scripts, SOPs, & more!",
+  "coachingTitle": "Coaching",
+  "coachingText": "Direct feedback from multiple $100k/month agency owners.",
+  "communityTitle": "Community",
+  "communityText": "A community of like-minded agency owners from $100k+.",
+  "marketingSkillsTitle": "PROFITABLE <br /> MARKETING SKILLS",
+
+  "exploreMore": "Explore More",
+  "course1Title": "Sales 101",
+  "course1Desc": "Copy & Paste demo decks, intro scripts, recordings of $8k+ closes, how to sell to burned prospects, how I sold over $900k in one month, objection library, and more!",
+  "course2Title": "Fulfillment & Ops",
+  "course2Desc": "Operations and Fulfillment course detailing SOPs, ads, client success, ClickUp, Slack, sops.",
+  "course3Title": "Client Success 101",
+  "course3Desc": "How to get amazing client results with a sub 5% churn rate on average and dominate your competitors with the best results in your niche.",
+  "course4Title": "1:1 Coaching With Nathan Bentley",
+  "course4Desc": "Unlock 1on1 coaching with Nathan Bentley.",
+  "course5Title": "$10k+ MRR Course",
+  "course5Desc": "Group coaching links for agencies at $10-30k MRR",
+  "course6Title": "Resources",
+  "course6Desc": "Get access to our SRL Screenshots and resources we use here at Practise PhD Agency.",
+  "aboutFounder": "About the Founder",
+  "earlyLifeTitle": "EARLY LIFE",
+  "nathanName": "Nathan Bentley",
+  "earlyLifeDesc1Part1": "is a",
+  "earlyLifeDesc1Part2": "seasoned entrepreneur and digital marketing expert",
+  "earlyLifeDesc1Part3": ", best known for founding Practice PhD and Steal My Agency. With a proven track record in building successful businesses, Nathan's journey to creating a",
+  "earlyLifeAgency": "$150k/month agency",
+  "earlyLifeDesc1Part4": "is nothing short of inspiring.",
+  "earlyLifeDesc2": "His expertise and innovative strategies have positioned him as a leading figure in the digital marketing space, making his teachings highly sought after by agency owners and marketing professionals alike.",
+  "nathanLaptopAlt": "Nathan working on laptop",
+  "luxuryCarAlt": "Luxury sports cars",
+  "heroButton": "Steal My Agency",
+  "howWeCompare": "How We Compare?",
+  "grandmasCourseTitle": "Not your Grandmas Course",
+  "grandmasCourseSubTitle": "Unlike gurus we actively run a $150k/mrr agency right now!",
+  "traditionalGurusTitle": "Traditional Gurus",
+  "stealMyAgencyTitle": "With Steal My Agency",
+  "traditionalGurus": [
+    "Let everybody in with money",
+    "High Upfront cost",
+    "Outdated marketing Strategies",
+    "Low to 0 experience running agency in 2024",
+    "Worrying about your competition taking all the good deals"
+  ],
+  "stealMyAgency": [
+    "Tight Community of killers",
+    "Full recordings, ads, and sops of a 7 figure agency",
+    "Learn from people who are in the trenches.",
+    "Actually running the best SMMA agency in Med",
+    "Become the market authority for real estate investing in your service areas."
+  ],
+  "realReviews": "Real Reviews",
+  "successStoriesTitle": "HEAR ABOUT OUR SUCCESS <br /> FROM OUR MEMBERS",
+  "successStoriesSubtitle": "Explore authentic stories from our graduates who have achieved incredible results. These are real voices, real growth, and real success.",
+
+  "reviews": [
+    {
+      "id": "1",
+      "name": "John Carter",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "review": "Nathan's program completely changed my career path. I went from struggling freelancer to closing $40k deals. Highly recommended!",
+      "rating": 5
+    },
+    {
+      "id": "2",
+      "name": "Sophia Lee",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "review": "Within a month, I transformed my agency results. The guidance was clear, practical, and absolutely life-changing.",
+      "rating": 5
+    },
+    {
+      "id": "3",
+      "name": "Michael Smith",
+      "avatar": "https://randomuser.me/api/portraits/men/56.jpg",
+      "review": "I've taken many online programs, but this is by far the best. Authentic, powerful, and worth every penny.",
+      "rating": 4
+    },
+    {
+      "id": "4",
+      "name": "Emma Davis",
+      "avatar": "https://randomuser.me/api/portraits/women/68.jpg",
+      "review": "I crossed $100,000 in sales thanks to this program. The strategies just work — no gimmicks, only results!",
+      "rating": 5
+    }
+  ],
+
+  "communityHeader": "BE PART OF <br /> THE FAM",
+  "communitySubtitle": "Join a community with 50+ experts",
+  "expertise": "Expertise",
+
+  "earlyLifeDescription1": "<strong>Nathan Bentley</strong> is a <strong>seasoned entrepreneur and digital marketing expert</strong>, best known for founding Practice PhD and Steal My Agency. With a proven track record in building successful businesses, Nathan's journey to creating a <strong>$150k/month agency</strong> is nothing short of inspiring.",
+  "earlyLifeDescription2": "His expertise and innovative strategies have positioned him as a leading figure in the digital marketing space, making his teachings highly sought after by agency owners and marketing professionals alike.",
+  "grandmasTitle": "Not your Grandmas Course",
+  "grandmasSubtitle": "Unlike gurus we actively run a $150k/mrr agency right now!",
+  "stealMyAgencyButton": "Steal My Agency",
+  "faq": {
+    "header": "FAQs",
+    "title": "FREQUENTLY <br /> ASKED QUESTIONS",
+    "question1": "What is Steal my agency?",
+    "answer1": "Steal my agency is a comprehensive business program that teaches you how to build and scale your own marketing agency from scratch.",
+    "question2": "How long will I have access to Steal my agency?",
+    "answer2": "You will have lifetime access to all the course materials, updates, and community support once you enroll.",
+    "question3": "What makes SMA different from other groups?",
+    "answer3": "SMA focuses on practical, real-world implementation with proven systems, mentorship, and a supportive community of successful agency owners.",
+    "question4": "Can I pay the enrollment fee in installments?",
+    "answer4": "Yes, we offer flexible payment plans to make the program accessible. Contact our support team for available installment options.",
+    "question5": "Is the content live or recorded?",
+    "answer5": "The program includes both live sessions for real-time interaction and recorded content that you can access anytime at your own pace.",
+    "question6": "Can this work for me?",
+    "answer6": "This program is designed to work for anyone committed to building a successful agency, regardless of your current experience level or background.",
+    "button": "Steal My Agency"
+  },
+  "footer": {
+    "centerText": "Skool login",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© Steal My Agency {{year}}. All rights reserved.",
+    "designedBy": "Designed by Prashant Dagar"
+  },
+  "membersSection": {
+    "members": "Members"
+  }
+}
