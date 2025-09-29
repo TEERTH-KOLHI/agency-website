@@ -22,21 +22,6 @@ export default function Header() {
           {t("title")}
         </h1>
 
-        {/* Center CTA Button */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <Link
-            href="#waitlist"
-            className="relative inline-block px-5 sm:px-6 py-2 sm:py-0.5 font-semibold sm:font-bold text-white rounded-4xl border-2 border-[#1846de]
-               bg-black
-               hover:shadow-[0_0_15px_5px_rgba(128,90,250,0.6),0_0_25px_10px_rgba(59,130,246,0.4)]
-               transition-shadow duration-300 text-center"
-          >
-            <span className="relative z-10 text-lg sm:text-xl md:text-2xl">
-              <h1>{t("button")}</h1>
-            </span>
-          </Link>
-        </div>
-
         {/* Right Language Switcher */}
         <div className="flex items-center space-x-2 bg-black border border-[#1846de] rounded-full px-2 py-1 shadow-sm">
           <Globe className="w-4 h-4 text-gray-300" />

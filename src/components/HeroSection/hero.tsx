@@ -48,10 +48,13 @@ const HeroSection: React.FC = () => {
         {features.map((item, i) => (
           <li
             key={i}
-            className="cursor-pointer rounded-lg border border-transparent bg-white/20 p-2 text-center backdrop-blur-md transition-transform duration-300 ease-out hover:translate-y-[-5px] hover:scale-105 hover:border-black hover:shadow-lg md:p-3 dark:bg-white/5 dark:hover:border-white"
+            className="cursor-pointer rounded-lg bg-white p-4 text-center transition-transform duration-300 ease-out hover:translate-y-[-5px] hover:scale-105 hover:shadow-lg"
           >
-            <item.icon className="mx-auto w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-black dark:text-white" />
-            <p className="mt-2 text-xs leading-tight font-medium text-gray-800 md:text-sm dark:text-gray-200">
+            {/* Icon: always black */}
+            <item.icon className="mx-auto w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-black" />
+
+            {/* Text: always black */}
+            <p className="mt-2 text-xs leading-tight font-medium text-black md:text-sm">
               {t(item.textKey)}
             </p>
           </li>
