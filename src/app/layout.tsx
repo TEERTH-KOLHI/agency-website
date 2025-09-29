@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "stealmyagen",
-  description: "agency project",
+  title: "Pioneer Automation Agency - AI Voice Agents & CRM Solutions",
+  description: "Transform your business with 100+ automation experts. Specializing in Voice AI agents, CRM integrations, social media automation, and custom solutions. 150+ businesses automated successfully.",
 };
 
 export default function RootLayout({
