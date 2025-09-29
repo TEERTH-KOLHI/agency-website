@@ -213,7 +213,7 @@ const MarketingSkillsPage: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1
-            className="text-5xl md:text-8xl font-black uppercase tracking-widest mb-2 text-white leading-[0.9]"
+            className="text-5xl md:text-7xl font-black uppercase tracking-widest mb-2 text-white leading-[1.03]"
             dangerouslySetInnerHTML={{ __html: t("marketingSkillsTitle") }}
           />
         </div>

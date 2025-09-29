@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
     <section className="mt-15 relative flex flex-col items-center justify-center min-h-screen px-4 text-center pt-24">
       {/* Heading */}
       <p className="text-yellow-400 text-sm mb-2">{t("students")}</p>
-      <h1 className="text-white font-bold text-3xl sm:text-4xl md:text-8xl leading-[0.8] uppercase">
+      <h1 className="text-white font-bold text-3xl sm:text-4xl md:text-7xl leading-[1.03] uppercase">
         {t("heroTitle")}
       </h1>
 

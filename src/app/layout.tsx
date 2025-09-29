@@ -23,16 +23,19 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="nl">
+      {/* Dutch as default */}
       <head>
-        {/* Jersey 10 font import */}
+        {/* Prevent Google Translate popup */}
+        <meta name="google" content="notranslate" />
+        {/* Iceberg font import */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap"
           rel="stylesheet"
         />
         <style>{`
           h1 {
-            font-family: 'Jersey 10', sans-serif;
+            font-family: 'Iceberg', sans-serif;
             color: white; /* visible in dark mode */
           }
         `}</style>

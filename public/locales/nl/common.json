@@ -1,0 +1,143 @@
+{
+  "title": "STEEL MIJN AGENCY",
+  "button": "STEEL MIJN AGENCY",
+  "welcome": "Welkom op mijn website!",
+  "students": "⭐⭐⭐⭐⭐ 100+ Werknemers",
+  "heroTitle": "Bouw een $100k/MRR Agency door mijn Agency te stelen",
+  "heroSubtitle": "Steel het exacte blueprint van een $150k/mrr agency PracticePhD.\nSteel onze scripts, SOP's, fulfilment, advertenties, snapshots en meer!",
+  "feature1": "Scripts & Sjablonen",
+  "feature2": "Agency SOP's",
+  "feature3": "Bewezen Advertenties",
+  "feature4": "Klantensnapshots",
+  "feature5": "Groei Hacks",
+  "feature6": "Privé Community",
+  "consistency": "Consistentie",
+  "quality": "Kwaliteit",
+  "reliability": "Betrouwbaarheid",
+  "transparency": "Transparantie",
+  "howToPlayTitle": "Hoe speel je dit spel?",
+
+  "classroomTitle": "Klaslokaal",
+  "classroomText": "Het volledige blueprint van een $150k/maand agency. Scripts, SOP's & meer!",
+  "coachingTitle": "Coaching",
+  "coachingText": "Directe feedback van meerdere $100k/maand agency-eigenaren.",
+  "communityTitle": "Community",
+  "communityText": "Een community van gelijkgestemde agency-eigenaren vanaf $100k+.",
+  "marketingSkillsTitle": "WINSTGEVENDE <br /> MARKETING VAARDIGHEDEN",
+
+  "exploreMore": "Ontdek Meer",
+  "course1Title": "Verkoop 101",
+  "course1Desc": "Copy & Paste demo decks, intro scripts, opnames van $8k+ deals, hoe te verkopen aan afgebrande prospects, hoe ik meer dan $900k in één maand verkocht, bezwarenbibliotheek en meer!",
+  "course2Title": "Fulfilment & Operaties",
+  "course2Desc": "Operations en Fulfilment cursus met SOP's, advertenties, klantensucces, ClickUp, Slack, SOP's.",
+  "course3Title": "Klantensucces 101",
+  "course3Desc": "Hoe je geweldige klantresultaten behaalt met een gemiddelde churn rate van minder dan 5% en je concurrenten domineert met de beste resultaten in je niche.",
+  "course4Title": "1:1 Coaching met Nathan Bentley",
+  "course4Desc": "Ontgrendel 1-op-1 coaching met Nathan Bentley.",
+  "course5Title": "$10k+ MRR Cursus",
+  "course5Desc": "Groep coaching links voor agencies met $10-30k MRR",
+  "course6Title": "Resources",
+  "course6Desc": "Krijg toegang tot onze SRL Screenshots en resources die we hier bij Practise PhD Agency gebruiken.",
+  "aboutFounder": "Over de Oprichter",
+  "earlyLifeTitle": "VROEGE LEVEN",
+  "nathanName": "Nathan Bentley",
+  "earlyLifeDesc1Part1": "is een",
+  "earlyLifeDesc1Part2": "ervaren ondernemer en digital marketing expert",
+  "earlyLifeDesc1Part3": ", vooral bekend als oprichter van Practice PhD en Steal My Agency. Met een bewezen staat van dienst in het bouwen van succesvolle bedrijven, is Nathans reis naar het creëren van een",
+  "earlyLifeAgency": "$150k/maand agency",
+  "earlyLifeDesc1Part4": "niets minder dan inspirerend.",
+  "earlyLifeDesc2": "Zijn expertise en innovatieve strategieën hebben hem gepositioneerd als een leidende figuur in de digitale marketing, waardoor zijn lessen zeer gewild zijn bij agency-eigenaren en marketingprofessionals.",
+  "nathanLaptopAlt": "Nathan werkt op laptop",
+  "luxuryCarAlt": "Luxe sportwagens",
+  "heroButton": "Steel Mijn Agency",
+  "howWeCompare": "Hoe Vergelijken We?",
+  "grandmasCourseTitle": "Niet je oma haar cursus",
+  "grandmasCourseSubTitle": "In tegenstelling tot gurus runnen we momenteel actief een $150k/mrr agency!",
+  "traditionalGurusTitle": "Traditionele Gurus",
+  "stealMyAgencyTitle": "Met Steal My Agency",
+  "traditionalGurus": [
+    "Laat iedereen met geld binnen",
+    "Hoge vooraf kosten",
+    "Verouderde marketingstrategieën",
+    "Weinig tot geen ervaring met agency runnen in 2024",
+    "Zorgen maken dat je concurrentie alle goede deals krijgt"
+  ],
+  "stealMyAgency": [
+    "Hechte community van top performers",
+    "Volledige opnames, advertenties en SOP's van een 7-cijferige agency",
+    "Leer van mensen die in de frontlinie werken",
+    "Runnen daadwerkelijk de beste SMMA agency in Med",
+    "Word de marktautoriteit voor vastgoedinvesteringen in je servicegebieden"
+  ],
+  "realReviews": "Echte Reviews",
+  "successStoriesTitle": "Hoor over ons succes <br /> van onze leden",
+  "successStoriesSubtitle": "Ontdek authentieke verhalen van onze afgestudeerden die ongelooflijke resultaten hebben behaald. Dit zijn echte stemmen, echte groei en echt succes.",
+
+  "reviews": [
+    {
+      "id": "1",
+      "name": "John Carter",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "review": "Nathans programma veranderde mijn carrière volledig. Van worstelende freelancer naar $40k deals sluiten. Zeer aanbevolen!",
+      "rating": 5
+    },
+    {
+      "id": "2",
+      "name": "Sophia Lee",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "review": "Binnen een maand transformeerde ik mijn agency resultaten. De begeleiding was duidelijk, praktisch en levensveranderend.",
+      "rating": 5
+    },
+    {
+      "id": "3",
+      "name": "Michael Smith",
+      "avatar": "https://randomuser.me/api/portraits/men/56.jpg",
+      "review": "Ik heb veel online programma's gevolgd, maar dit is verreweg de beste. Authentiek, krachtig en elke cent waard.",
+      "rating": 4
+    },
+    {
+      "id": "4",
+      "name": "Emma Davis",
+      "avatar": "https://randomuser.me/api/portraits/women/68.jpg",
+      "review": "Ik heb dankzij dit programma $100.000 aan sales behaald. De strategieën werken gewoon — geen trucjes, alleen resultaten!",
+      "rating": 5
+    }
+  ],
+
+  "communityHeader": "MAAK DEEL UIT VAN <br /> DE FAM",
+  "communitySubtitle": "Sluit je aan bij een community met 50+ experts",
+  "expertise": "Expertise",
+
+  "earlyLifeDescription1": "<strong>Nathan Bentley</strong> is een <strong>ervaren ondernemer en digital marketing expert</strong>, vooral bekend als oprichter van Practice PhD en Steal My Agency. Met een bewezen staat van dienst in het bouwen van succesvolle bedrijven, is Nathans reis naar het creëren van een <strong>$150k/maand agency</strong> niets minder dan inspirerend.",
+  "earlyLifeDescription2": "Zijn expertise en innovatieve strategieën hebben hem gepositioneerd als een leidende figuur in de digitale marketing, waardoor zijn lessen zeer gewild zijn bij agency-eigenaren en marketingprofessionals.",
+  "grandmasTitle": "Niet je oma haar cursus",
+  "grandmasSubtitle": "In tegenstelling tot gurus runnen we momenteel actief een $150k/mrr agency!",
+  "stealMyAgencyButton": "Steel Mijn Agency",
+  "faq": {
+    "header": "FAQs",
+    "title": "VAAK GESTELDE <br /> VRAGEN",
+    "question1": "Wat is Steal my Agency?",
+    "answer1": "Steal my Agency is een uitgebreid business-programma dat je leert hoe je je eigen marketing agency vanaf nul kunt opbouwen en opschalen.",
+    "question2": "Hoe lang heb ik toegang tot Steal my Agency?",
+    "answer2": "Je hebt levenslange toegang tot alle cursusmaterialen, updates en community support zodra je je inschrijft.",
+    "question3": "Wat maakt SMA anders dan andere groepen?",
+    "answer3": "SMA richt zich op praktische, real-world implementatie met bewezen systemen, mentorship en een ondersteunende community van succesvolle agency-eigenaren.",
+    "question4": "Kan ik het inschrijfgeld in termijnen betalen?",
+    "answer4": "Ja, we bieden flexibele betalingsplannen om het programma toegankelijk te maken. Neem contact op met ons supportteam voor beschikbare opties.",
+    "question5": "Is de inhoud live of opgenomen?",
+    "answer5": "Het programma omvat zowel live sessies voor realtime interactie als opgenomen inhoud die je op elk moment kunt bekijken.",
+    "question6": "Werkt dit voor mij?",
+    "answer6": "Dit programma is ontworpen om te werken voor iedereen die zich inzet om een succesvolle agency op te bouwen, ongeacht je huidige ervaring of achtergrond.",
+    "button": "Steel Mijn Agency"
+  },
+  "footer": {
+    "centerText": "Skool login",
+    "privacyPolicy": "Privacybeleid",
+    "termsOfService": "Gebruiksvoorwaarden",
+    "copyright": "© Steal My Agency {{year}}. Alle rechten voorbehouden.",
+    "designedBy": "Ontworpen door Prashant Dagar"
+  },
+  "membersSection": {
+    "members": "Leden"
+  }
+}

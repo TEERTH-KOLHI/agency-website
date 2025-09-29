@@ -1,7 +1,7 @@
-/** @type {import('next-i18next').UserConfig} */
 module.exports = {
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "es"],
+    defaultLocale: "nl", // Dutch as default
+    locales: ["nl", "en"], // supported locales
+    localeDetection: false, // optional: detect browser language
   },
 };

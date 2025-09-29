@@ -35,7 +35,7 @@ export default function GrandmasCourse() {
         {/* Title */}
         <div className="text-center mb-12">
           <h1
-            className="text-3xl md:text-8xl font-black mb-6"
+            className="text-3xl md:text-7xl font-black mb-6"
             dangerouslySetInnerHTML={{ __html: t("grandmasCourseTitle") }}
           />
           <p className="text-xl text-gray-400 font-medium">

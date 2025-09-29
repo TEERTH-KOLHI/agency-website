@@ -158,7 +158,7 @@ const CommunityCards = () => {
       {/* Header */}
       <div className="text-center mb-12">
         <h1
-          className="text-black dark:text-white text-8xl font-bold mb-2 leading-[0.84]"
+          className="text-black dark:text-white text-7xl font-bold mb-2 leading-[1.03]"
           dangerouslySetInnerHTML={{ __html: t("communityHeader") }}
         ></h1>
 

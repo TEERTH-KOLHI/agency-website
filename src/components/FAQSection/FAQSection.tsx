@@ -53,7 +53,7 @@ const FAQSection: React.FC = () => {
             </div>
           </div>
           <h1
-            className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-wider leading-[0.88]"
+            className="text-6xl md:text-7xl font-bold text-white mb-4 tracking-wider leading-[1.03]"
             dangerouslySetInnerHTML={{ __html: t("faq.title") }}
           />
         </div>
@@ -69,7 +69,7 @@ const FAQSection: React.FC = () => {
                 onClick={() => toggleItem(item.id)}
                 className="w-full px-8 py-6 text-left flex items-center justify-between text-white hover:bg-white/5 transition-colors duration-200 cursor-pointer"
               >
-                <span className="text-3xl font-medium pr-4">
+                <span className="text-2xl font-medium pr-4">
                   <h1>{item.question}</h1>
                 </span>
                 <div className="flex-shrink-0">
@@ -89,7 +89,7 @@ const FAQSection: React.FC = () => {
                     : "max-h-0 pt-0 pb-0"
                 }`}
               >
-                <div className="text-gray-300 text-3xl leading-relaxed">
+                <div className="text-gray-300 text-2xl leading-relaxed">
                   <h1>{item.answer}</h1>
                 </div>
               </div>

@@ -30,7 +30,7 @@ const SuccessStoriesSection: React.FC = () => {
           </div>
 
           <h1
-            className="text-5xl md:text-8xl font-black mb-8 leading-[1]"
+            className="text-3xl md:text-7xl font-black mb-8 leading-[1.03]"
             dangerouslySetInnerHTML={{ __html: t("successStoriesTitle") }}
           />
 
