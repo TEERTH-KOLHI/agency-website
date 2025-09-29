@@ -1,13 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import ContactModal from "../ContactModal";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
+  const handleContactClick = () => {
+    setIsContactModalOpen(true);
+  };
 
   return (
+    <>
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     <footer className="bg-gray-900 text-white py-8 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Top Section with Social Icons and Navigation */}
@@ -39,22 +51,30 @@ const Footer: React.FC = () => {
             </Link>
           </div>
 
-          {/* Center Text */}
-          <div className="text-center mb-4 md:mb-0">
-            <h3 className="text-lg font-medium">{t("footer.centerText")}</h3>
-          </div>
+          {/* Spacer for left alignment of social icons */}
+          <div className="flex-1"></div>
 
-          {/* Navigation Links */}
-          <div className="flex space-x-8">
+          {/* Navigation Links - Right aligned, all in one line */}
+          <div className="flex flex-wrap items-center gap-3 md:space-x-4">
+            <motion.button
+              onClick={handleContactClick}
+              className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {t("footer.centerText")}
+            </motion.button>
+
             <Link
               href="/privacy-policy"
-              className="text-blue-400 hover:text-blue-300 transition-colors duration-300 underline"
+              className="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white hover:bg-gray-700 rounded-lg transition-all duration-200 font-medium"
             >
               {t("footer.privacyPolicy")}
             </Link>
+
             <Link
               href="/terms-of-service"
-              className="text-blue-400 hover:text-blue-300 transition-colors duration-300 underline"
+              className="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white hover:bg-gray-700 rounded-lg transition-all duration-200 font-medium"
             >
               {t("footer.termsOfService")}
             </Link>
@@ -80,6 +100,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 
