@@ -3,22 +3,45 @@ import React from "react";
 import MembersSection from "../MembersSection/MembersSection";
 import Button from "../Button/button";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 
 interface CourseCardProps {
   icon: React.ReactNode;
   titleKey: string;
   descriptionKey: string;
+  index?: number;
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({
   icon,
   titleKey,
   descriptionKey,
+  index = 0,
 }) => {
   const { t } = useTranslation();
+  const cardRef = React.useRef(null);
+  const isInView = useInView(cardRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="group relative min-h-[280px] flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/20">
+    <motion.div
+      ref={cardRef}
+      className="group relative min-h-[280px] flex flex-col"
+      initial={{ opacity: 0, y: 60, rotateX: -15 }}
+      animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : { opacity: 0, y: 60, rotateX: -15 }}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.1,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }}
+      whileHover={{
+        y: -8,
+        rotateY: 5,
+        scale: 1.02,
+        transition: { duration: 0.3 }
+      }}
+      style={{ transformStyle: "preserve-3d" }}
+    >
       <style jsx>{`
         .group:hover .border-layer {
           clip-path: polygon(
@@ -76,12 +99,14 @@ const CourseCard: React.FC<CourseCardProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const MarketingSkillsPage: React.FC = () => {
   const { t } = useTranslation();
+  const sectionRef = React.useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   const courses = [
     {
@@ -208,35 +233,73 @@ const MarketingSkillsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-transparent text-white overflow-x-hidden">
+    <motion.div
+      ref={sectionRef}
+      className="min-h-screen bg-transparent text-white overflow-x-hidden"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-7xl mx-auto px-5 py-16">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <motion.h1
             className="text-5xl md:text-7xl font-black uppercase tracking-widest mb-2 text-white leading-[1.03]"
             dangerouslySetInnerHTML={{ __html: t("marketingSkillsTitle") }}
+            whileHover={{
+              scale: 1.05,
+              textShadow: "0 0 20px rgba(255,255,255,0.5)"
+            }}
+            transition={{ duration: 0.3 }}
           />
-        </div>
+        </motion.div>
 
         {/* Course Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-20">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-20"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
           {courses.map((course, index) => (
             <CourseCard
               key={index}
               icon={course.icon}
               titleKey={course.titleKey}
               descriptionKey={course.descriptionKey}
+              index={index}
             />
           ))}
-        </div>
+        </motion.div>
 
         {/* Reusable Button */}
-        <div className="text-center mt-20 flex flex-col items-center gap-8">
-          <Button href="#" label={t("button")} />
-          <MembersSection avatars={memberAvatars} memberCount={80} />
-        </div>
+        <motion.div
+          className="text-center mt-20 flex flex-col items-center gap-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Button href="#" label={t("button")} />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.5, delay: 1.0 }}
+          >
+            <MembersSection avatars={memberAvatars} memberCount={80} />
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

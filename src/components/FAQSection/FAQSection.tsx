@@ -5,6 +5,8 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import MembersSection from "../MembersSection/MembersSection";
 import Button from "../Button/button";
 import { useTranslation } from "react-i18next";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "framer-motion";
 
 interface FAQItem {
   id: number;
@@ -14,6 +16,8 @@ interface FAQItem {
 
 const FAQSection: React.FC = () => {
   const { t } = useTranslation();
+  const sectionRef = React.useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   const [openItems, setOpenItems] = useState<Record<number, boolean>>({});
   const memberAvatars = [

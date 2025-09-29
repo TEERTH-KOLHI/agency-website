@@ -4,9 +4,13 @@ import { FaChalkboard, FaBookOpen, FaUsers } from "react-icons/fa";
 import MembersSection from "../MembersSection/MembersSection";
 import Button from "../Button/button";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 
 const HowToPlay = () => {
   const { t } = useTranslation();
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const memberAvatars = [
     "https://randomuser.me/api/portraits/men/32.jpg",
@@ -15,72 +19,225 @@ const HowToPlay = () => {
     "https://randomuser.me/api/portraits/women/68.jpg",
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { x: -60, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }
+    }
+  };
+
+  const rightItemVariants = {
+    hidden: { x: 60, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }
+    }
+  };
+
   return (
-    <section className="relative py-10 px-6 text-white bg-transparent">
+    <motion.section
+      ref={ref}
+      className="relative py-10 px-6 text-white bg-transparent"
+      variants={containerVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+    >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-6xl">
         {/* LEFT SIDE */}
-        <div className="p-4 max-w-md mx-auto md:mx-0">
+        <motion.div
+          className="p-4 max-w-md mx-auto md:mx-0"
+          variants={itemVariants}
+        >
           {/* Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-7xl font-extrabold uppercase leading-[1] text-center ">
+          <motion.h1
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold uppercase leading-tight text-center max-w-md"
+            variants={itemVariants}
+            style={{
+              lineHeight: '1.1',
+              wordBreak: 'break-word',
+              hyphens: 'auto'
+            }}
+          >
             {t("howToPlayTitle")}
-          </h1>
+          </motion.h1>
 
           {/* Reusable components (members) */}
-          <div className="mt-6 flex flex-col items-center md:items-start gap-8">
-            <Button href="#" label={t("button")} />
+          <motion.div
+            className="mt-6 flex flex-col items-center md:items-start gap-8"
+            variants={itemVariants}
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button href="#" label={t("button")} />
+            </motion.div>
             <MembersSection avatars={memberAvatars} memberCount={80} />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* RIGHT SIDE */}
-        <div className="flex flex-col gap-12 p-6 max-w-3xl mx-auto md:mx-0 relative md:right-[50px]">
+        <motion.div
+          className="flex flex-col gap-12 p-6 max-w-3xl mx-auto md:mx-0 relative md:right-[50px]"
+          variants={rightItemVariants}
+        >
           {/* Classroom */}
-          <div className="flex items-start gap-4">
-            <div className="bg-[#1f0a30] p-4 rounded-xl text-pink-400">
+          <motion.div
+            className="flex items-start gap-4"
+            variants={rightItemVariants}
+            whileHover={{ scale: 1.02, y: -5 }}
+            transition={{ duration: 0.2 }}
+          >
+            <motion.div
+              className="bg-[#1f0a30] p-4 rounded-xl text-pink-400"
+              whileHover={{
+                rotate: [0, -5, 5, 0],
+                scale: 1.1,
+                boxShadow: "0 0 25px rgba(236, 72, 153, 0.3)"
+              }}
+              transition={{ duration: 0.3 }}
+            >
               <FaChalkboard size={45} />
-            </div>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-2xl md:text-3xl font-bold uppercase">
+            </motion.div>
+            <div className="flex flex-col gap-4 flex-1">
+              <motion.h3
+                className="text-xl md:text-2xl lg:text-3xl font-bold uppercase"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                style={{
+                  lineHeight: '1.2',
+                  wordBreak: 'break-word'
+                }}
+              >
                 {t("classroomTitle")}
-              </h3>
-              <p className="text-gray-400 text-lg md:text-[20px]">
+              </motion.h3>
+              <motion.p
+                className="text-gray-400 text-base md:text-lg leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                style={{
+                  lineHeight: '1.5'
+                }}
+              >
                 {t("classroomText")}
-              </p>
+              </motion.p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Coaching */}
-          <div className="flex items-start gap-4">
-            <div className="bg-[#1f0a30] p-4 rounded-xl text-cyan-400">
+          <motion.div
+            className="flex items-start gap-4"
+            variants={rightItemVariants}
+            whileHover={{ scale: 1.02, y: -5 }}
+            transition={{ duration: 0.2 }}
+          >
+            <motion.div
+              className="bg-[#1f0a30] p-4 rounded-xl text-cyan-400"
+              whileHover={{
+                rotate: [0, -5, 5, 0],
+                scale: 1.1,
+                boxShadow: "0 0 25px rgba(34, 211, 238, 0.3)"
+              }}
+              transition={{ duration: 0.3 }}
+            >
               <FaBookOpen size={45} />
-            </div>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-2xl md:text-3xl font-bold uppercase">
+            </motion.div>
+            <div className="flex flex-col gap-4 flex-1">
+              <motion.h3
+                className="text-xl md:text-2xl lg:text-3xl font-bold uppercase"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                style={{
+                  lineHeight: '1.2',
+                  wordBreak: 'break-word'
+                }}
+              >
                 {t("coachingTitle")}
-              </h3>
-              <p className="text-gray-400 text-lg md:text-[20px]">
+              </motion.h3>
+              <motion.p
+                className="text-gray-400 text-base md:text-lg leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                style={{
+                  lineHeight: '1.5'
+                }}
+              >
                 {t("coachingText")}
-              </p>
+              </motion.p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Community */}
-          <div className="flex items-start gap-4">
-            <div className="bg-[#1f0a30] p-4 rounded-xl text-purple-400">
+          <motion.div
+            className="flex items-start gap-4"
+            variants={rightItemVariants}
+            whileHover={{ scale: 1.02, y: -5 }}
+            transition={{ duration: 0.2 }}
+          >
+            <motion.div
+              className="bg-[#1f0a30] p-4 rounded-xl text-purple-400"
+              whileHover={{
+                rotate: [0, -5, 5, 0],
+                scale: 1.1,
+                boxShadow: "0 0 25px rgba(168, 85, 247, 0.3)"
+              }}
+              transition={{ duration: 0.3 }}
+            >
               <FaUsers size={45} />
-            </div>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-2xl md:text-3xl font-bold uppercase">
+            </motion.div>
+            <div className="flex flex-col gap-4 flex-1">
+              <motion.h3
+                className="text-xl md:text-2xl lg:text-3xl font-bold uppercase"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+                style={{
+                  lineHeight: '1.2',
+                  wordBreak: 'break-word'
+                }}
+              >
                 {t("communityTitle")}
-              </h3>
-              <p className="text-gray-400 text-lg md:text-[20px]">
+              </motion.h3>
+              <motion.p
+                className="text-gray-400 text-base md:text-lg leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ delay: 0.8, duration: 0.5 }}
+                style={{
+                  lineHeight: '1.5'
+                }}
+              >
                 {t("communityText")}
-              </p>
+              </motion.p>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
