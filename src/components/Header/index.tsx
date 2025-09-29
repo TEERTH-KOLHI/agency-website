@@ -20,7 +20,7 @@ export default function Header() {
       className="fixed top-0 left-0 w-full bg-transparent px-4 sm:px-6 md:px-10 py-3 sm:py-4 z-50"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <motion.div
         className="flex items-center justify-between relative"

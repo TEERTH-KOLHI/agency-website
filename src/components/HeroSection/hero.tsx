@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: [0.6, -0.05, 0.01, 0.99]
+        ease: "easeOut" as const
       }
     }
   };
@@ -62,7 +62,7 @@ const HeroSection: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: [0.6, -0.05, 0.01, 0.99]
+        ease: "easeOut" as const
       }
     }
   };
@@ -73,7 +73,7 @@ const HeroSection: React.FC = () => {
       transition: {
         duration: 6,
         repeat: Infinity,
-        ease: "easeInOut"
+        ease: "easeInOut" as const
       }
     }
   };
