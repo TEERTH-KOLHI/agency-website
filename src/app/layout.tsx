@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import FooterNew from "@/components/FooterNew/FooterNew";
 import PageTransition from "@/components/PageTransition";
 
 const geistSans = Geist({
@@ -37,18 +37,18 @@ export default function RootLayout({
         <style>{`
           h1 {
             font-family: 'Iceberg', sans-serif;
-            color: white; /* visible in dark mode */
+            color: black; /* visible in light mode */
           }
         `}</style>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
         <Header />
         <PageTransition>
           {children}
         </PageTransition>
-        <Footer />
+        <FooterNew />
       </body>
     </html>
   );

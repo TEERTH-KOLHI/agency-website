@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 w-full bg-transparent px-4 sm:px-6 md:px-10 py-3 sm:py-4 z-50"
+      className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 px-4 sm:px-6 md:px-10 py-3 sm:py-4 z-50 shadow-sm"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -30,34 +30,20 @@ export default function Header() {
       >
         {/* Logo / Title */}
         <motion.h1
-          className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide text-pink-400 drop-shadow-md"
+          className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide text-black"
           whileHover={{
             scale: 1.05,
-            textShadow: "0 0 15px rgba(236, 72, 153, 0.7)",
             transition: { duration: 0.2 }
           }}
-          animate={{
-            textShadow: [
-              "0 0 5px rgba(236, 72, 153, 0.3)",
-              "0 0 10px rgba(236, 72, 153, 0.5)",
-              "0 0 5px rgba(236, 72, 153, 0.3)"
-            ]
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
         >
-          {t("title")}
+          PIONEER AUTOMATION AGENCY
         </motion.h1>
 
         {/* Right Language Switcher */}
         <motion.div
-          className="flex items-center space-x-2 bg-black border border-[#1846de] rounded-full px-2 py-1 shadow-sm"
+          className="flex items-center space-x-2 bg-white border border-black rounded-full px-2 py-1 shadow-sm"
           whileHover={{
             scale: 1.05,
-            boxShadow: "0 0 15px rgba(24, 70, 222, 0.4)",
             transition: { duration: 0.2 }
           }}
         >
@@ -67,20 +53,20 @@ export default function Header() {
               transition: { duration: 8, repeat: Infinity, ease: "linear" }
             }}
           >
-            <Globe className="w-4 h-4 text-gray-300" />
+            <Globe className="w-4 h-4 text-black" />
           </motion.div>
           <div className="flex space-x-1">
             <motion.button
               onClick={() => setLanguage("nl")}
               className={`px-2 py-0.5 text-xs sm:text-sm rounded-full transition-all ${
                 language === "nl"
-                  ? "bg-[#1846de] text-white font-semibold"
-                  : "text-gray-300 hover:text-white"
+                  ? "bg-black text-white font-semibold"
+                  : "text-gray-600 hover:text-black"
               }`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               animate={language === "nl" ? {
-                boxShadow: "0 0 8px rgba(24, 70, 222, 0.6)"
+                boxShadow: "0 0 8px rgba(0, 0, 0, 0.3)"
               } : {}}
               transition={{ duration: 0.2 }}
             >
@@ -90,13 +76,13 @@ export default function Header() {
               onClick={() => setLanguage("en")}
               className={`px-2 py-0.5 text-xs sm:text-sm rounded-full transition-all ${
                 language === "en"
-                  ? "bg-[#1846de] text-white font-semibold"
-                  : "text-gray-300 hover:text-white"
+                  ? "bg-black text-white font-semibold"
+                  : "text-gray-600 hover:text-black"
               }`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               animate={language === "en" ? {
-                boxShadow: "0 0 8px rgba(24, 70, 222, 0.6)"
+                boxShadow: "0 0 8px rgba(0, 0, 0, 0.3)"
               } : {}}
               transition={{ duration: 0.2 }}
             >
