@@ -1,86 +1,122 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
-import { Check, X } from "lucide-react";
+import { Check, X, Phone } from "lucide-react";
 
-const ComparisonSection: React.FC = () => {
-  const { t } = useTranslation();
-
-  const comparisonFeatures = [
-    "vocalchat.feature1",
-    "vocalchat.feature2",
-    "vocalchat.feature3",
-    "vocalchat.feature4",
-    "vocalchat.feature5"
+export default function ComparisonSection() {
+  const vocalchatFeatures = [
+    "24/7, never off duty",
+    "Instant replies, no hold time",
+    "Low cost, no salaries or training",
+    "Handles unlimited calls",
+    "100% accurate, no mood swings",
   ];
 
   const traditionalLimitations = [
-    "vocalchat.limitation1",
-    "vocalchat.limitation2",
-    "vocalchat.limitation3",
-    "vocalchat.limitation4",
-    "vocalchat.limitation5"
+    "Limited to business hours",
+    "Customers wait on hold",
+    "High cost, salaries + overhead",
+    "Limited by team size",
+    "Varies by employee",
   ];
 
   return (
-    <section className="bg-gray-50 py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-black text-3xl md:text-4xl font-bold mb-4">
-            {t("vocalchat.vsTitle")}
-          </h2>
-          <button className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors mt-4">
-            {t("vocalchat.bookCall")}
+    <div className="min-h-screen bg-white py-16 px-8 flex items-center justify-center">
+      <div className="max-w-6xl w-full">
+        {/* Header */}
+        <div className="flex justify-between items-start mb-16">
+          <div>
+            <h1 className="text-6xl font-bold leading-tight">
+              <span className="text-gray-900">Vocalchat AI </span>
+              <span className="text-purple-500">vs.</span>
+              <br />
+              <span className="text-gray-900">Traditional Hiring</span>
+            </h1>
+          </div>
+          <button className="flex items-center gap-2 px-5 py-2.5 border-2 border-black rounded-lg text-black font-medium hover:bg-gray-50 transition-all">
+            Book a Call
+            <Phone className="w-4 h-4" />
           </button>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Pioneer Agency Column */}
-          <motion.div
-            className="bg-white rounded-2xl p-8 shadow-lg"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-black text-2xl font-bold mb-6 text-center">{t("vocalchat.pioneerAI")}</h3>
-            <div className="space-y-4">
-              {comparisonFeatures.map((featureKey, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0" />
-                  <span className="text-black">{t(featureKey)}</span>
+        {/* Comparison Container - Centered */}
+        <div className="flex justify-center items-start gap-8">
+          {/* Left Side - VocalChat AI with Purple Glow */}
+          <div className="w-full max-w-md relative">
+            {/* Purple glow background */}
+            <div className="absolute -inset-6 bg-gradient-to-br from-purple-300 via-purple-200 to-blue-200 rounded-[3rem] blur-2xl opacity-40"></div>
+
+            {/* Dark Card */}
+            <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl p-8 shadow-2xl">
+              {/* Icon Section */}
+              <div className="bg-gray-800/50 backdrop-blur rounded-2xl p-5 mb-8 flex items-center justify-center">
+                <div className="relative">
+                  <svg
+                    className="w-12 h-12 text-purple-500"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                  >
+                    <path
+                      d="M24 8L24 40M8 24L40 24"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                    />
+                    <circle
+                      cx="24"
+                      cy="24"
+                      r="18"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Features */}
+              <div className="space-y-5">
+                {vocalchatFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="mt-0.5">
+                      <Check
+                        className="w-6 h-6 text-green-400"
+                        strokeWidth={2.5}
+                      />
+                    </div>
+                    <span className="text-white text-lg font-normal leading-relaxed">
+                      {feature}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Traditional */}
+          <div className="w-full max-w-md pt-2">
+            {/* Traditional Badge - Centered */}
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex items-center justify-center px-8 py-2.5 bg-white border-2 border-gray-200 rounded-full shadow-sm">
+                <span className="text-gray-800 font-medium text-base">
+                  Traditional
+                </span>
+              </div>
+            </div>
+
+            {/* Limitations */}
+            <div className="space-y-5">
+              {traditionalLimitations.map((limitation, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <div className="mt-0.5">
+                    <X className="w-6 h-6 text-red-500" strokeWidth={2.5} />
+                  </div>
+                  <span className="text-gray-600 text-lg font-normal leading-relaxed">
+                    {limitation}
+                  </span>
                 </div>
               ))}
             </div>
-          </motion.div>
-
-          {/* Traditional Methods Column */}
-          <motion.div
-            className="bg-white rounded-2xl p-8 shadow-lg"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-black text-2xl font-bold mb-6 text-center">{t("vocalchat.traditional")}</h3>
-            <div className="space-y-4">
-              {traditionalLimitations.map((limitationKey, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <X className="w-6 h-6 text-red-500 flex-shrink-0" />
-                  <span className="text-gray-600">{t(limitationKey)}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default ComparisonSection;
+}

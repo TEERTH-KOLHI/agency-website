@@ -1,19 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import FooterNew from "@/components/FooterNew/FooterNew";
 import PageTransition from "@/components/PageTransition";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Pioneer Automation Agency - AI Voice Agents & CRM Solutions",
@@ -29,21 +18,24 @@ export default function RootLayout({
       <head>
         {/* Prevent Google Translate popup */}
         <meta name="google" content="notranslate" />
-        {/* Fredericka the Great font import */}
+
+        {/* SUSE Mono font import */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"
+          href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"
           rel="stylesheet"
         />
+
         <style>{`
           h1 {
-            font-family: 'Fredericka the Great', cursive;
+            font-family: 'SUSE Mono', monospace;
             color: black; /* visible in light mode */
+          }
+          body {
+            font-family: 'SUSE Mono', monospace;
           }
         `}</style>
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
-      >
+      <body className="antialiased bg-white">
         <Header />
         <PageTransition>{children}</PageTransition>
         <FooterNew />

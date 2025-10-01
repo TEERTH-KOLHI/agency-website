@@ -48,10 +48,10 @@ const VocalChatStyleHero: React.FC = () => {
               {t("vocalchat.heroSubtitle")}
             </p>
             <div className="flex gap-3">
-              <button className="cursor-pointer bg-indigo-600 text-white px-4 py-2 rounded-[4px] text-sm font-medium shadow-lg hover:bg-indigo-700 transition">
+              <button className="cursor-pointer bg-black text-white px-4 py-2 rounded-[4px] text-sm font-medium shadow-lg border border-black hover:bg-white hover:text-black transition">
                 {t("vocalchat.learnMore")}
               </button>
-              <button className="cursor-pointer border border-gray-300 text-black px-4 py-2 rounded-[4px] text-sm font-medium hover:bg-black hover:text-white transition">
+              <button className="cursor-pointer bg-black text-white px-4 py-2 rounded-[4px] text-sm font-medium shadow-lg border border-black hover:bg-white hover:text-black transition">
                 {t("vocalchat.bookCall")}
               </button>
             </div>

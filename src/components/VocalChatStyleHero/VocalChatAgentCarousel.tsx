@@ -1,26 +1,50 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 
 const agents = [
   {
     id: 1,
-    src: "https://framerusercontent.com/images/dytp933FzpOspVNxBsIFtSsI.png",
+    src: "images/ai-voice/Selena.png",
+    audio: "/audios/agent1.mp3", // replace with your file
   },
   {
     id: 2,
-    src: "https://framerusercontent.com/images/AlETzUjSDNpRfwLePuNfTBVa4.png",
+    src: "images/ai-voice/Amira.png",
+    audio: "/audios/agent2.mp3",
   },
   {
     id: 3,
-    src: "https://framerusercontent.com/images/cDD1n4h3SKDyBW67BEdtrSfys.png",
+    src: "images/ai-voice/Thalina.png",
+    audio: "/audios/agent3.mp3",
+  },
+  {
+    id: 4,
+    src: "images/ai-voice/Heleen.png",
+    audio: "/audios/agent4.mp3",
+  },
+  {
+    id: 5,
+    src: "images/ai-voice/Zelda.png",
+    audio: "/audios/agent5.mp3",
+  },
+  {
+    id: 6,
+    src: "images/ai-voice/Bastian.png",
+    audio: "/audios/agent6.mp3",
+  },
+  {
+    id: 7,
+    src: "images/ai-voice/Casper.png",
+    audio: "/audios/agent7.mp3",
   },
 ];
 
 const VocalChatAgentCarousel = () => {
   const [current, setCurrent] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const prevSlide = () =>
     setCurrent((p) => (p === 0 ? agents.length - 1 : p - 1));
@@ -35,6 +59,20 @@ const VocalChatAgentCarousel = () => {
     if (i === (current + 1) % agents.length) return "right";
     return "hidden";
   };
+
+  // Sync audio when current or isPlaying changes
+  useEffect(() => {
+    if (!audioRef.current) return;
+
+    audioRef.current.src = agents[current].audio;
+    if (isPlaying) {
+      audioRef.current.play().catch(() => {
+        setIsPlaying(false); // in case autoplay fails
+      });
+    } else {
+      audioRef.current.pause();
+    }
+  }, [current, isPlaying]);
 
   return (
     <section className="relative w-full flex flex-col items-center py-0">
@@ -110,6 +148,9 @@ const VocalChatAgentCarousel = () => {
           <ChevronRight className="w-5 h-5" />
         </button>
       </div>
+
+      {/* Hidden audio element */}
+      <audio ref={audioRef} />
     </section>
   );
 };
