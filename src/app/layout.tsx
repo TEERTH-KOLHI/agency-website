@@ -17,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Pioneer Automation Agency - AI Voice Agents & CRM Solutions",
-  description: "Transform your business with 100+ automation experts. Specializing in Voice AI agents, CRM integrations, social media automation, and custom solutions. 150+ businesses automated successfully.",
+  description:
+    "Transform your business with 100+ automation experts. Specializing in Voice AI agents, CRM integrations, social media automation, and custom solutions. 150+ businesses automated successfully.",
 };
 
 export default function RootLayout({
@@ -25,18 +26,17 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="nl">
-      {/* Dutch as default */}
       <head>
         {/* Prevent Google Translate popup */}
         <meta name="google" content="notranslate" />
-        {/* Iceberg font import */}
+        {/* Fredericka the Great font import */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"
           rel="stylesheet"
         />
         <style>{`
           h1 {
-            font-family: 'Iceberg', sans-serif;
+            font-family: 'Fredericka the Great', cursive;
             color: black; /* visible in light mode */
           }
         `}</style>
@@ -45,9 +45,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
         <Header />
-        <PageTransition>
-          {children}
-        </PageTransition>
+        <PageTransition>{children}</PageTransition>
         <FooterNew />
       </body>
     </html>

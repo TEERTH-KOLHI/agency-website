@@ -33,10 +33,10 @@ export default function Header() {
           className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide text-black"
           whileHover={{
             scale: 1.05,
-            transition: { duration: 0.2 }
+            transition: { duration: 0.2 },
           }}
         >
-          PIONEER AUTOMATION AGENCY
+          Pioneer Automation Agency
         </motion.h1>
 
         {/* Right Language Switcher */}
@@ -44,13 +44,13 @@ export default function Header() {
           className="flex items-center space-x-2 bg-white border border-black rounded-full px-2 py-1 shadow-sm"
           whileHover={{
             scale: 1.05,
-            transition: { duration: 0.2 }
+            transition: { duration: 0.2 },
           }}
         >
           <motion.div
             animate={{
               rotate: [0, 360],
-              transition: { duration: 8, repeat: Infinity, ease: "linear" }
+              transition: { duration: 8, repeat: Infinity, ease: "linear" },
             }}
           >
             <Globe className="w-4 h-4 text-black" />
@@ -65,9 +65,13 @@ export default function Header() {
               }`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              animate={language === "nl" ? {
-                boxShadow: "0 0 8px rgba(0, 0, 0, 0.3)"
-              } : {}}
+              animate={
+                language === "nl"
+                  ? {
+                      boxShadow: "0 0 8px rgba(0, 0, 0, 0.3)",
+                    }
+                  : {}
+              }
               transition={{ duration: 0.2 }}
             >
               NL
@@ -81,9 +85,13 @@ export default function Header() {
               }`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              animate={language === "en" ? {
-                boxShadow: "0 0 8px rgba(0, 0, 0, 0.3)"
-              } : {}}
+              animate={
+                language === "en"
+                  ? {
+                      boxShadow: "0 0 8px rgba(0, 0, 0, 0.3)",
+                    }
+                  : {}
+              }
               transition={{ duration: 0.2 }}
             >
               EN
