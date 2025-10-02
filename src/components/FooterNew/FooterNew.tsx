@@ -13,7 +13,7 @@ const FooterNew: React.FC = () => {
           {/* Company Name */}
           <div className="mb-4 md:mb-0">
             <h1 className="text-black text-xl font-bold tracking-wider">
-              PIONEER AGENCY
+              PIONEER AUTOMATION AGENCY
             </h1>
           </div>
 
@@ -42,7 +42,7 @@ const FooterNew: React.FC = () => {
         {/* Bottom Copyright */}
         <div className="text-center">
           <p className="text-gray-600 text-sm">
-            © 2025 Pioneer Agency. All rights reserved.
+            © 2025 Pioneer Automation Agency. All rights reserved.
           </p>
         </div>
       </div>

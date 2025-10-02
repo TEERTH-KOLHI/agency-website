@@ -30,7 +30,7 @@ export default function CallNotification() {
       <div className="w-0.5 h-12 bg-gradient-to-b from-purple-300 via-purple-200 to-transparent"></div>
 
       {/* Middle: Answered By Card with horizontal line */}
-      <div className="flex items-center w-full max-w-md ml-60">
+      <div className="flex flex-col md:flex-row items-center w-full max-w-md md:ml-60">
         {/* AI Card */}
         <div className="bg-white rounded-2xl px-4 py-3 flex items-center gap-2 shadow-md flex-none">
           <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-100">
@@ -70,8 +70,8 @@ export default function CallNotification() {
           </div>
         </div>
 
-        {/* Horizontal Line to the right */}
-        <div className="h-0.5 flex-1 bg-gradient-to-r from-purple-300 via-purple-200 to-transparent"></div>
+        {/* Line - Vertical on mobile, Horizontal on desktop */}
+        <div className="w-0.5 h-12 md:h-0.5 md:w-auto md:flex-1 bg-gradient-to-b md:bg-gradient-to-r from-purple-300 via-purple-200 to-transparent"></div>
       </div>
 
       <style jsx>{`

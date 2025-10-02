@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import VocalChatAgentCarousel from "./VocalChatAgentCarousel";
 import AgentPreview from "./AgentPreview";
 import AnimatedDownArrow from "./AnimatedDownArrow";
+import { HelpCircle, Star } from "lucide-react"; // Import black & white icons
 
 const VocalChatStyleHero: React.FC = () => {
   const { t } = useTranslation();
@@ -78,16 +79,16 @@ const VocalChatStyleHero: React.FC = () => {
 
       {/* Horizontal Layout: AgentPreview | AnimatedDownArrow | Problem Statement */}
       <motion.div
-        className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start w-full max-w-7xl gap-4 mt-6 px-2 sm:px-4 mr-45"
+        className="flex flex-col lg:flex-row items-start justify-start w-full max-w-7xl gap-4 mt-6 px-2 sm:px-4 lg:mr-40"
         variants={itemVariants}
       >
         {/* Left: Agent Preview */}
-        <div className="flex-1 min-w-[150px] mt-10">
+        <div className="w-full lg:flex-1 lg:min-w-[200px] mt-0 flex justify-center lg:justify-start">
           <AgentPreview />
         </div>
 
         {/* Right: Problem Statement */}
-        <div className="flex-1 min-w-[150px] mt-4 md:mt-0">
+        <div className="w-full lg:flex-1 lg:min-w-[300px] mt-4 lg:mt-0 lg:mr-0">
           <motion.div
             className="w-full bg-black rounded-2xl p-2 sm:p-3 text-white"
             variants={itemVariants}
@@ -100,7 +101,7 @@ const VocalChatStyleHero: React.FC = () => {
             </div>
 
             {/* Problem Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
               {/* Left Card */}
               <div className="relative bg-black p-2 sm:p-3 rounded-xl text-left">
                 <h4 className="text-xs sm:text-sm font-semibold mb-1">
@@ -109,8 +110,8 @@ const VocalChatStyleHero: React.FC = () => {
                 <p className="text-gray-400 text-[10px] sm:text-xs">
                   {t("vocalchat.problem1Desc")}
                 </p>
-                <div className="absolute bottom-1 left-1 text-gray-700/40 text-3xl sm:text-4xl font-bold select-none">
-                  ?
+                <div className="absolute bottom-1 left-1 text-gray-400 text-3xl sm:text-4xl select-none">
+                  <HelpCircle strokeWidth={1.5} />
                 </div>
               </div>
 
@@ -136,8 +137,8 @@ const VocalChatStyleHero: React.FC = () => {
                 <p className="text-gray-400 text-[10px] sm:text-xs">
                   {t("vocalchat.problem3Desc")}
                 </p>
-                <div className="absolute bottom-1 right-1 text-gray-700/40 text-3xl sm:text-4xl font-bold select-none">
-                  ✦
+                <div className="absolute bottom-1 right-1 text-gray-400 text-3xl sm:text-4xl select-none">
+                  <Star strokeWidth={1.5} />
                 </div>
               </div>
             </div>
