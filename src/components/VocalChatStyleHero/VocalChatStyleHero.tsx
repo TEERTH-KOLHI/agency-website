@@ -30,7 +30,7 @@ const VocalChatStyleHero: React.FC = () => {
 
   return (
     <motion.section
-      className="bg-white min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-25"
+      className="bg-white min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-20"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

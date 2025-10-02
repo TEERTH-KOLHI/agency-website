@@ -96,7 +96,7 @@ const VocalChatAgentCarousel = () => {
     <section className="relative w-full flex flex-col items-center py-0">
       <div className="relative w-full max-w-3xl flex items-center justify-center overflow-hidden">
         {/* Carousel Images */}
-        <div className="relative flex items-center justify-center w-full h-[420px] sm:h-[350px] xs:h-[280px]">
+        <div className="relative flex items-center justify-center w-full h-[420px] sm:h-[370px] xs:h-[280px]">
           {agents.map((agent, idx) => {
             const pos = getPosition(idx);
             let transformValue = "";
