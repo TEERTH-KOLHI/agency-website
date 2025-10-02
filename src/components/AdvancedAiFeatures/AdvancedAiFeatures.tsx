@@ -192,10 +192,6 @@ export const AdvancedAiFeatures = () => {
         }}
         transition={{ duration: 0.3, delay: index * 0.1 }}
         className="border-primary-600/20 rounded border-2 -ml-[2px] -mt-[2px] w-full h-full bg-transparent hover:bg-primary-600/20 border-1 transition-colors duration-200"
-        // initial={{ opacity: 0, y: 20 }}
-        // whileInView={{ opacity: 1, y: 0 }}
-        // viewport={{ once: true, margin: "-50px" }}
-        // transition={{ delay: index * 0.1, duration: 0.3 }}
       >
         <div className="relative p-8 h-full flex flex-col justify-between z-10">
           <div className="flex items-center gap-4 mb-4">
@@ -215,17 +211,11 @@ export const AdvancedAiFeatures = () => {
       id="features"
       className="flex flex-col items-center justify-center py-20 px-4 bg-white"
     >
-      <div
-        // variants={slideInFromTop}
-        // initial="hidden"
-        // whileInView="visible"
-        // viewport={{ once: true }}
-        className="text-center mb-16"
-      >
-        <h2 className="text-4xl font-bold text-black mb-4">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-black mb-4">
           {t("Advanced AI Features")}
-        </h2>
-        <p className="text-gray-700 text-lg max-w-[800px]">
+        </h1>
+        <p className="text-gray-700 text-1xl max-w-[830px]">
           {t(
             "Experience next-generation AI communication with cutting-edge features and enterprise-grade reliability."
           )}
@@ -238,23 +228,17 @@ export const AdvancedAiFeatures = () => {
 
       {/* Integration Section */}
       <div className="text-center">
-        <h3 className="text-4xl font-bold text-black mb-6 text-center">
+        <h1 className="text-4xl font-bold text-black mb-6 text-center">
           {t("Seamless Integrations")}
-        </h3>
-        <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-[800px]">
+        </h1>
+        <p className="text-gray-600 mb-8 text-1xl leading-relaxed max-w-[800px]">
           {t(
-            "Connect with popular business tools and platforms for streamlined workflows. Our AI seamlessly integrates with your existing tech stack to enhance productivity."
+            "Seamlessly integrate our AI with your existing tools to streamline workflows and boost productivity."
           )}
         </p>
       </div>
       <div className="flex items-center justify-between flex-col md:flex-row max-w-[1400px] w-full">
-        <div
-          // variants={slideInFromLeft(0.3)}
-          // initial="hidden"
-          // whileInView="visible"
-          // viewport={{ once: true }}
-          className="space-y-8 w-full md:w-1/2"
-        >
+        <div className="space-y-8 w-full md:w-1/2">
           <div>
             <div className="grid grid-cols-3 gap-2">
               {integrations.map((integration, index) => {
@@ -262,10 +246,6 @@ export const AdvancedAiFeatures = () => {
                 return (
                   <div
                     key={integration.name}
-                    // // initial={{ opacity: 0, y: 20 }}
-                    // whileInView={{ opacity: 1, y: 0 }}
-                    // viewport={{ once: true }}
-                    // transition={{ delay: 0.1 * index, duration: 0.5 }}
                     className="group relative bg-gray-100 rounded-lg"
                   >
                     <div className="relative bg-gradient-to-br from-gray/[0.08] to-gray/[0.02] backdrop-blur-xl border border-white/[0.15] rounded p-6 text-center transition-all duration-500 hover:border-gray/30 hover:from-gray/[0.12] hover:to-white/[0.04] hover:shadow-2xl hover:shadow-primary-500/10  ">
@@ -327,12 +307,7 @@ export const AdvancedAiFeatures = () => {
           </div>
         </div>
 
-        <div
-        // variants={slideInFromRight(0.3)}
-        // initial="hidden"
-        // whileInView="visible"
-        // viewport={{ once: true }}
-        >
+        <div>
           <div className=" mr-[200px] flex items-center justify-center">
             {[...Array(12)].map((_, i) => {
               const heights = [36, 45, 37, 48, 40, 50, 50, 40, 47, 42, 38, 36];

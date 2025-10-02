@@ -2,41 +2,31 @@
 
 import React from "react";
 import { Check, X, Phone } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function ComparisonSection() {
-  const vocalchatFeatures = [
-    "24/7 AI Voice Agents – Never off duty, instant replies, no hold time.",
-    "AI Chatbot Solutions – Engage customers instantly across channels.",
-    "Smart Calendar & Appointment Booking – No missed leads, seamless scheduling.",
-    "RAG-Powered AI Agents – Leverage real-time knowledge for accurate answers.",
-    "Knowledge Base Integration – Centralized, consistent, and scalable support.",
-    "Minimum Latency – Fast, human-like conversations.",
-    "CRM Integrations – Connect and automate your entire sales funnel.",
-    "Complete Business Automation – From first contact to closing deals.",
-    "Cost Efficiency – No salaries, no training, unlimited scale.",
-    "100% Accuracy & Consistency – No mood swings, no errors.",
-  ];
+  const { t } = useTranslation();
 
-  const traditionalLimitations = [
-    "Limited to business hours",
-    "Customers wait on hold",
-    "High cost, salaries + overhead",
-    "Limited by team size",
-    "Varies by employee",
-  ];
+  const vocalchatFeatures = t("comparison.vocalchatFeatures", {
+    returnObjects: true,
+  }) as string[];
+  const traditionalLimitations = t("comparison.traditionalLimitations", {
+    returnObjects: true,
+  }) as string[];
 
   return (
     <div className="min-h-screen bg-gray-50 py-5 px-4 sm:px-8 flex flex-col items-center justify-center">
       <div className="max-w-7xl w-full">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-84 mb-5 text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-start gap-6 lg:gap-84 mb-5 text-center lg:text-left">
           <h1 className="text-2xl sm:text-3xl font-bold leading-tight text-gray-800">
-            Pioneer Automation <span className="text-purple-500">vs.</span>
+            {t("comparison.header.part1")}{" "}
+            <span className="text-purple-500">vs.</span>
             <br />
-            Traditional Hiring
+            {t("comparison.header.part2")}
           </h1>
           <button className="flex items-center gap-2 px-5 py-2.5 border border-black rounded-md bg-black text-white text-sm font-medium hover:bg-transparent hover:text-black transition-all duration-300 cursor-pointer">
-            Book a Call
+            {t("comparison.bookCall")}
             <Phone className="w-4 h-4" />
           </button>
         </div>
@@ -76,7 +66,7 @@ export default function ComparisonSection() {
                   {vocalchatFeatures.map((feature, index) => (
                     <div
                       key={index}
-                      className="flex items-start gap-2 whitespace-nowrap"
+                      className="flex items-start gap-2 whitespace-normal"
                     >
                       <Check
                         className="w-4 h-4 text-white mt-0.5 flex-shrink-0"
@@ -98,7 +88,7 @@ export default function ComparisonSection() {
             <div className="mb-6 flex justify-center lg:justify-start">
               <div className="inline-flex items-center px-4 py-1.5 bg-white border border-gray-300 rounded-full">
                 <span className="text-gray-800 text-xs font-medium">
-                  Traditional
+                  {t("comparison.traditionalBadge")}
                 </span>
               </div>
             </div>
@@ -108,7 +98,7 @@ export default function ComparisonSection() {
               {traditionalLimitations.map((limitation, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-2 whitespace-nowrap"
+                  className="flex items-start gap-2 whitespace-normal"
                 >
                   <X
                     className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0"

@@ -5,16 +5,18 @@ import ServicesSection from "@/components/ServicesSection/ServicesSection";
 import FAQSectionNew from "@/components/FAQSectionNew/FAQSectionNew";
 import CTASection from "@/components/CTASection/CTASection";
 import { AdvancedAiFeatures } from "@/components/AdvancedAiFeatures/AdvancedAiFeatures";
+import Review from "@/components/Review/review";
 
 export default function Home() {
   return (
     <div>
       <VocalChatStyleHero />
       <WorkflowSection />
+      <AdvancedAiFeatures />
       <ComparisonSection />
       <ServicesSection />
-      <AdvancedAiFeatures />
       <FAQSectionNew />
+      <Review />
       <CTASection />
     </div>
   );

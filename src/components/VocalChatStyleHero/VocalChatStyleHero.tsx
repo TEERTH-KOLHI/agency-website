@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import VocalChatAgentCarousel from "./VocalChatAgentCarousel";
 import AgentPreview from "./AgentPreview";
-import AnimatedDownArrow from "./AnimatedDownArrow";
+
 import { HelpCircle, Star } from "lucide-react"; // Import black & white icons
 
 const VocalChatStyleHero: React.FC = () => {

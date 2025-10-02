@@ -271,5 +271,191 @@
     "message": "Your Message",
     "fileAttachment": "Attach a file",
     "submit": "Submit"
+  },
+  "Advanced AI Features": "Advanced AI Features",
+  "Experience next-generation AI communication with cutting-edge features and enterprise-grade reliability.": "Experience next-generation AI communication with cutting-edge features and enterprise-grade reliability.",
+
+  "Unlimited Concurrent Calls": "Unlimited Concurrent Calls",
+  "Handle thousands of calls simultaneously without any capacity limitations": "Handle thousands of calls simultaneously without any capacity limitations",
+
+  "24/7 Availability": "24/7 Availability",
+  "Never miss a call or opportunity with our always-on AI agents": "Never miss a call or opportunity with our always-on AI agents",
+
+  "Intelligent Call Distribution": "Intelligent Call Distribution",
+  "Smart routing based on caller needs and agent availability": "Smart routing based on caller needs and agent availability",
+
+  "Real-time Analytics": "Real-time Analytics",
+  "Live performance monitoring with detailed conversation insights": "Live performance monitoring with detailed conversation insights",
+
+  "Enterprise Security": "Enterprise Security",
+  "GDPR compliant, SOC 2 certified with end-to-end encryption": "GDPR compliant, SOC 2 certified with end-to-end encryption",
+
+  "Multi-Language Support": "Multi-Language Support",
+  "Communicate globally in different languages with natural fluency": "Communicate globally in different languages with natural fluency",
+
+  "Seamless Integrations": "Seamless Integrations",
+  "Seamlessly integrate our AI with your existing tools to streamline workflows and boost productivity.": "Seamlessly integrate our AI with your existing tools to streamline workflows and boost productivity.",
+
+  "CRM": "CRM",
+  "Marketing": "Marketing",
+  "Scheduling": "Scheduling",
+  "Email": "Email",
+  "Automation": "Automation",
+  "Communication": "Communication",
+  "Communications": "Communications",
+
+  "Salesforce": "Salesforce",
+  "HubSpot": "HubSpot",
+  "Google Calendar": "Google Calendar",
+  "Outlook": "Outlook",
+  "Zapier": "Zapier",
+  "Make": "Make",
+  "Slack": "Slack",
+  "Teams": "Teams",
+  "Twilio": "Twilio",
+
+  "testimonials": {
+    "header": "Customer Reviews",
+    "dateOptions": { "day": "numeric", "month": "short", "year": "numeric" },
+    "list": [
+      {
+        "id": 1,
+        "name": "Sarah Chen",
+        "position": "CEO, TechFlow Solutions",
+        "company": "TechFlow Solutions",
+        "rating": 4.5,
+        "review": "NaturalFlow.ai has revolutionized our customer support. The AI handles 95% of inquiries autonomously, allowing our team to focus on strategic initiatives.",
+        "image": "https://randomuser.me/api/portraits/women/44.jpg",
+        "initials": "SC",
+        "bgColor": "from-gray-600 to-gray-400"
+      },
+      {
+        "id": 2,
+        "name": "Michael Rodriguez",
+        "position": "VP of Operations",
+        "company": "Global Commerce Inc",
+        "rating": 4.5,
+        "review": "The multilingual support and 24/7 availability have expanded our global reach significantly. Customer satisfaction increased by 40% since implementation.",
+        "image": "https://randomuser.me/api/portraits/men/32.jpg",
+        "initials": "MR",
+        "bgColor": "from-gray-200 to-gray-100"
+      },
+      {
+        "id": 3,
+        "name": "Emily Thompson",
+        "position": "Chief Technology Officer",
+        "company": "InnovateX Corp",
+        "rating": 5,
+        "review": "The seamless integration and enterprise-grade security gave us complete confidence. ROI was visible within the first month of deployment.",
+        "image": "https://randomuser.me/api/portraits/women/68.jpg",
+        "initials": "ET",
+        "bgColor": "from-gray-200 to-gray-100"
+      },
+      {
+        "id": 4,
+        "name": "David Park",
+        "position": "Director of Customer Success",
+        "company": "ScaleUp Dynamics",
+        "rating": 4.5,
+        "review": "NaturalFlow's AI agents understand context better than any solution we've tried. The natural conversations have impressed both our team and customers.",
+        "image": "https://randomuser.me/api/portraits/men/22.jpg",
+        "initials": "DP",
+        "bgColor": "from-gray-200 to-gray-100"
+      },
+      {
+        "id": 5,
+        "name": "Lisa Wang",
+        "position": "Head of Digital Innovation",
+        "company": "FutureVision Industries",
+        "rating": 4.5,
+        "review": "The analytics dashboard provides insights we never had before. Understanding customer interactions at this level has transformed our business strategy.",
+        "image": "https://randomuser.me/api/portraits/women/15.jpg",
+        "initials": "LW",
+        "bgColor": "from-gray-200 to-gray-100"
+      },
+      {
+        "id": 6,
+        "name": "James Wilson",
+        "position": "Founder & CEO",
+        "company": "NextGen Solutions",
+        "rating": 5,
+        "review": "From setup to ongoing support, the NaturalFlow team exceeded expectations. The AI continuously learns and improves our customer experience.",
+        "image": "https://randomuser.me/api/portraits/men/17.jpg",
+        "initials": "JW",
+        "bgColor": "from-gray-200 to-gray-100"
+      },
+      {
+        "id": 7,
+        "name": "Alex Chen",
+        "position": "CTO, DataFlow Systems",
+        "company": "DataFlow Systems",
+        "rating": 4.5,
+        "review": "The AI's ability to handle complex queries while maintaining personalized responses is remarkable. Our technical support efficiency improved by 65%.",
+        "image": "https://randomuser.me/api/portraits/men/45.jpg",
+        "initials": "AC",
+        "bgColor": "from-gray-200 to-gray-100"
+      },
+      {
+        "id": 8,
+        "name": "Jennifer Martinez",
+        "position": "Head of Customer Experience",
+        "company": "CloudTech Solutions",
+        "rating": 5,
+        "review": "NaturalFlow seamlessly integrated with our existing CRM. The deployment was smooth and the results exceeded our highest expectations.",
+        "image": "https://randomuser.me/api/portraits/women/32.jpg",
+        "initials": "JM",
+        "bgColor": "from-gray-200 to-gray-100"
+      },
+      {
+        "id": 9,
+        "name": "Robert Kim",
+        "position": "VP of Technology",
+        "company": "InnovateTech Corp",
+        "rating": 4.5,
+        "review": "The scalability and performance are outstanding. From 100 to 10,000+ conversations per day - NaturalFlow handled it flawlessly.",
+        "image": "https://randomuser.me/api/portraits/men/56.jpg",
+        "initials": "RK",
+        "bgColor": "from-gray-200 to-gray-100"
+      },
+      {
+        "id": 10,
+        "name": "Amanda Foster",
+        "position": "Director of Operations",
+        "company": "NextWave Industries",
+        "rating": 5,
+        "review": "The multilingual capabilities opened new markets for us. Customer satisfaction scores increased across all regions we operate in.",
+        "image": "https://randomuser.me/api/portraits/women/89.jpg",
+        "initials": "AF",
+        "bgColor": "from-gray-200 to-gray-100"
+      }
+    ]
+  },
+
+  "comparison": {
+    "header": {
+      "part1": "Pioneer Automation",
+      "part2": "Traditional Hiring"
+    },
+    "bookCall": "Book a Call",
+    "traditionalBadge": "Traditional",
+    "vocalchatFeatures": [
+      "24/7 AI Voice Agents – Never off duty, instant replies, no hold time.",
+      "AI Chatbot Solutions – Engage customers instantly across channels.",
+      "Smart Calendar & Appointment Booking – No missed leads, seamless scheduling.",
+      "RAG-Powered AI Agents – Leverage real-time knowledge for accurate answers.",
+      "Knowledge Base Integration – Centralized, consistent, and scalable support.",
+      "Minimum Latency – Fast, human-like conversations.",
+      "CRM Integrations – Connect and automate your entire sales funnel.",
+      "Complete Business Automation – From first contact to closing deals.",
+      "Cost Efficiency – No salaries, no training, unlimited scale.",
+      "100% Accuracy & Consistency – No mood swings, no errors."
+    ],
+    "traditionalLimitations": [
+      "Limited to business hours",
+      "Customers wait on hold",
+      "High cost, salaries + overhead",
+      "Limited by team size",
+      "Varies by employee"
+    ]
   }
 }
