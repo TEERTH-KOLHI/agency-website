@@ -60,14 +60,11 @@ const WorkflowProcess: React.FC<WorkflowProcessProps> = ({ steps }) => {
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-full h-45 rounded-lg flex items-center justify-center overflow-hidden">
-                  <motion.img
+                <div className="w-full h-45 rounded-lg flex items-start justify-start overflow-hidden">
+                  <img
                     src={step.image}
                     alt={t(step.titleKey)}
                     className="w-full h-full object-cover rounded-lg shadow-lg"
-                    initial={{ scale: 1 }}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
                   />
                 </div>
               </motion.div>
