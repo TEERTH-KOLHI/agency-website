@@ -116,7 +116,7 @@ const VocalChatStyleHero: React.FC = () => {
               </div>
 
               {/* Center Highlighted Card */}
-              <div className="relative bg-gradient-to-b from-indigo-900 to-purple-900 p-2 sm:p-3 rounded-xl text-left shadow-md">
+              <div className="relative bg-gradient-to-b from-transparent-900 to-purple-900 p-2 sm:p-3 rounded-xl text-left shadow-md">
                 <h4 className="text-sm sm:text-base font-bold mb-1">
                   {t("vocalchat.problem2Title")}
                 </h4>
