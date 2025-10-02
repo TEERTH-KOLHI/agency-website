@@ -50,10 +50,88 @@ const VocalChatStyleHero: React.FC = () => {
               {t("vocalchat.heroSubtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-              <button className="cursor-pointer bg-black text-white px-4 sm:px-6 py-2 sm:py-3 rounded-[4px] text-sm sm:text-base font-medium shadow-lg border border-black hover:bg-white hover:text-black transition">
-                {t("vocalchat.learnMore")}
-              </button>
-              <button className="cursor-pointer bg-black text-white px-4 sm:px-6 py-2 sm:py-3 rounded-[4px] text-sm sm:text-base font-medium shadow-lg border border-black hover:bg-white hover:text-black transition">
+              <style jsx>{`
+                .liquid-btn {
+                  color: #e0dadaff;
+                  text-decoration: none;
+                  padding: 10px 30px;
+                  position: relative;
+                  overflow: hidden;
+                  border-radius: 0.5rem;
+                  transition: 0.2s;
+                  display: inline-block;
+                  cursor: pointer;
+                  font-weight: 500;
+                  font-size: 16px;
+                  background: white;
+                  border: none;
+                }
+                .liquid-btn span {
+                  position: relative;
+                  z-index: 1;
+                  color: #0e0d0dff;
+                  transition: color 0.3s;
+                }
+                .liquid {
+                  position: absolute;
+                  top: -60px;
+                  left: 0;
+                  width: 100%;
+                  height: 200px;
+                  background: #0080ff;
+                  box-shadow: inset 0 0 50px rgba(243, 234, 234, 0.7);
+                  z-index: 0;
+                  transition: 0.6s;
+                }
+                .liquid::after,
+                .liquid::before {
+                  position: absolute;
+                  content: "";
+                  width: 200%;
+                  height: 200%;
+                  top: 0;
+                  left: 0;
+                  transform: translate(-25%, -75%);
+                }
+                .liquid::after {
+                  border-radius: 45%;
+                  background: rgba(222, 217, 217, 1);
+                  box-shadow: 0 0 10px 5px #0080ff, inset 0 0 5px #0080ff;
+                  animation: animate 5s linear infinite;
+                  opacity: 0.8;
+                }
+                .liquid::before {
+                  border-radius: 40%;
+                  box-shadow: 0 0 10px rgba(241, 235, 235, 0.96),
+                    inset 0 0 5px rgba(244, 239, 239, 0.83);
+                  background: rgba(246, 241, 241, 0.89);
+                  animation: animate 7s linear infinite;
+                }
+                @keyframes animate {
+                  0% {
+                    transform: translate(-25%, -75%) rotate(0);
+                  }
+                  100% {
+                    transform: translate(-25%, -75%) rotate(360deg);
+                  }
+                }
+                .liquid-btn:hover .liquid {
+                  top: -120px;
+                }
+                .liquid-btn:hover span {
+                  color: #fff;
+                }
+                .liquid-btn:hover {
+                  box-shadow: 0 0 5px #0080ff, inset 0 0 5px #0080ff;
+                  transition-delay: 0.2s;
+                }
+              `}</style>{" "}
+              <button className="liquid-btn">
+                {" "}
+                <span>{t("vocalchat.learnMore")}</span>{" "}
+                <div className="liquid"></div>{" "}
+              </button>{" "}
+              <button className="cursor-pointer bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-[8px] text-sm sm:text-base font-medium shadow-lg border border-black hover:bg-[#7cd5f2] hover:text-black transition">
                 {t("vocalchat.bookCall")}
               </button>
             </div>
@@ -116,7 +194,7 @@ const VocalChatStyleHero: React.FC = () => {
               </div>
 
               {/* Center Highlighted Card */}
-              <div className="relative bg-gradient-to-b from-transparent-900 to-purple-900 p-2 sm:p-3 rounded-xl text-left shadow-md">
+              <div className="relative bg-gradient-to-b from-indigo-900 to-purple-900 p-2 sm:p-3 rounded-xl text-left shadow-md">
                 <h4 className="text-sm sm:text-base font-bold mb-1">
                   {t("vocalchat.problem2Title")}
                 </h4>

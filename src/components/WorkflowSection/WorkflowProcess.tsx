@@ -60,7 +60,7 @@ const WorkflowProcess: React.FC<WorkflowProcessProps> = ({ steps }) => {
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-full h-45 rounded-lg flex items-start justify-start overflow-hidden">
+                <div className="w-full h-46 rounded-lg flex items-start justify-start overflow-hidden ">
                   <img
                     src={step.image}
                     alt={t(step.titleKey)}

@@ -1,7 +1,13 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  Pause,
+  ArrowRight,
+} from "lucide-react";
 
 const agents = [
   {
@@ -181,14 +187,16 @@ const VocalChatAgentCarousel = () => {
                   {pos === "center" && !showDetail && (
                     <button
                       onClick={() => setShowDetail(true)}
-                      className="absolute bottom-2 left-1/2 -translate-x-1/2 
+                      className="absolute bottom-1 left-1/2 -translate-x-1/2 
              px-2.5 py-1 text-[10px] 
-             bg-white/20 text-black font-medium 
-             rounded-md shadow-md border border-white/30
+             bg-white text-black font-medium 
+             rounded-t-md rounded-b-none shadow-md border 
              hover:bg-white/30 hover:shadow-lg 
-             transition-all duration-200 cursor-pointer"
+             transition-all duration-200 cursor-pointer
+             flex items-center gap-1"
                     >
-                      Learn More
+                      <span>Learn More</span>
+                      <ArrowRight size={12} strokeWidth={2} />
                     </button>
                   )}
 
@@ -196,13 +204,13 @@ const VocalChatAgentCarousel = () => {
                   {pos === "center" && (
                     <div
                       ref={detailRef}
-                      className={`absolute inset-0 flex flex-col justify-center items-center text-center text-white px-2 transform transition-all duration-700 ease-in-out ${
+                      className={`absolute inset-0 flex flex-col justify-center items-center text-center text-white px-0 transform transition-all duration-700 ease-in-out ${
                         showDetail
                           ? "translate-y-0 opacity-100"
                           : "translate-y-full opacity-0"
                       }`}
                     >
-                      <p className="text-[11px] mt-2 drop-shadow-md max-w-[60%]">
+                      <p className="text-[11px] mt-2 drop-shadow-md max-w-[40%]">
                         {agent.description}
                       </p>
                     </div>

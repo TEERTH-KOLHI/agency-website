@@ -4,6 +4,7 @@ import ComparisonSection from "@/components/ComparisonSection/ComparisonSection"
 import ServicesSection from "@/components/ServicesSection/ServicesSection";
 import FAQSectionNew from "@/components/FAQSectionNew/FAQSectionNew";
 import CTASection from "@/components/CTASection/CTASection";
+import { AdvancedAiFeatures } from "@/components/AdvancedAiFeatures/AdvancedAiFeatures";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <WorkflowSection />
       <ComparisonSection />
       <ServicesSection />
+      <AdvancedAiFeatures />
       <FAQSectionNew />
       <CTASection />
     </div>
