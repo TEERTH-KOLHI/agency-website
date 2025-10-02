@@ -8,58 +8,93 @@ const agents = [
     id: 1,
     src: "images/ai-voice/Selena.png",
     audio: "audio/ai-voice/Selena.mpeg",
+    name: "Selena",
+    role: "AI Customer Support",
+    description: "Selena handles real-time queries with empathy and accuracy.",
   },
   {
     id: 2,
     src: "images/ai-voice/Amira.png",
     audio: "audio/ai-voice/Amira.mpeg",
+    name: "Amira",
+    role: "Technical Assistant",
+    description:
+      "Amira resolves technical issues and automates troubleshooting.",
   },
   {
     id: 3,
     src: "images/ai-voice/Thalina.png",
     audio: "audio/ai-voice/Thalina.mpeg",
+    name: "Thalina",
+    role: "Sales Agent",
+    description:
+      "Thalina recommends the best products tailored to customer needs.",
   },
   {
     id: 4,
     src: "images/ai-voice/Heleen.png",
     audio: "audio/ai-voice/Heleen.mpeg",
+    name: "Heleen",
+    role: "Data Analyst",
+    description:
+      "Heleen provides insights from interactions to improve strategies.",
   },
   {
     id: 5,
     src: "images/ai-voice/Zelda.png",
     audio: "audio/ai-voice/Zelda.mpeg",
+    name: "Zelda",
+    role: "Engagement Specialist",
+    description: "Zelda keeps customers engaged with proactive conversations.",
   },
   {
     id: 6,
     src: "images/ai-voice/Bastian.png",
     audio: "audio/ai-voice/Bastian.mpeg",
+    name: "Bastian",
+    role: "Onboarding Guide",
+    description: "Bastian guides new users through onboarding smoothly.",
   },
   {
     id: 7,
     src: "images/ai-voice/Casper.png",
     audio: "audio/ai-voice/Casper.mpeg",
+    name: "Casper",
+    role: "AI Trainer",
+    description: "Casper helps refine models with continuous learning.",
   },
   {
     id: 8,
     src: "images/ai-voice/Tirza.png",
     audio: "audio/ai-voice/Tirza.mpeg",
+    name: "Tirza",
+    role: "Operations Assistant",
+    description: "Tirza ensures workflows are optimized and efficient.",
   },
   {
     id: 9,
     src: "images/ai-voice/Bella.png",
     audio: "audio/ai-voice/Bella.mpeg",
+    name: "Bella",
+    role: "Marketing Agent",
+    description: "Bella drives brand engagement with personalized outreach.",
   },
   {
     id: 10,
     src: "images/ai-voice/Carla.png",
     audio: "audio/ai-voice/Carla.mpeg",
+    name: "Carla",
+    role: "Support Agent",
+    description: "Carla ensures customers always receive timely assistance.",
   },
 ];
 
 const VocalChatAgentCarousel = () => {
   const [current, setCurrent] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showDetail, setShowDetail] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const detailRef = useRef<HTMLDivElement | null>(null);
 
   const prevSlide = () =>
     setCurrent((p) => (p === 0 ? agents.length - 1 : p - 1));
@@ -74,6 +109,20 @@ const VocalChatAgentCarousel = () => {
     return "hidden";
   };
 
+  // Close details when clicking outside
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (detailRef.current && !detailRef.current.contains(e.target as Node)) {
+        setShowDetail(false);
+      }
+    }
+    if (showDetail) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [showDetail]);
+
+  // Handle audio play/pause
   useEffect(() => {
     if (!audioRef.current) return;
     audioRef.current.src = agents[current].audio;
@@ -108,16 +157,6 @@ const VocalChatAgentCarousel = () => {
               transformValue = "translateX(160px) scale(0.9)";
             else transformValue = "translateX(0) scale(0.7)";
 
-            // Responsive scaling
-            const responsiveTransform = `
-              ${pos === "center" ? "scale(1.2) sm:scale(1.5)" : ""}
-              ${
-                pos === "left" || pos === "right"
-                  ? "scale(0.7) sm:scale(0.9)"
-                  : ""
-              }
-            `;
-
             return (
               <div
                 key={agent.id}
@@ -129,11 +168,47 @@ const VocalChatAgentCarousel = () => {
                 }}
               >
                 <div className="relative w-52 sm:w-64 xs:w-44 h-52 sm:h-64 xs:h-44 overflow-hidden rounded-2xl">
+                  {/* Image with blur when showing details */}
                   <img
                     src={agent.src}
                     alt={`Agent ${agent.id}`}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover transition duration-500 ${
+                      pos === "center" && showDetail ? "blur-[5px]" : ""
+                    }`}
                   />
+
+                  {/* Learn More Button */}
+                  {pos === "center" && !showDetail && (
+                    <button
+                      onClick={() => setShowDetail(true)}
+                      className="absolute bottom-2 left-1/2 -translate-x-1/2 
+             px-2.5 py-1 text-[10px] 
+             bg-white/20 text-black font-medium 
+             rounded-md shadow-md border border-white/30
+             hover:bg-white/30 hover:shadow-lg 
+             transition-all duration-200 cursor-pointer"
+                    >
+                      Learn More
+                    </button>
+                  )}
+
+                  {/* Details Overlay with Slide Effect */}
+                  {pos === "center" && (
+                    <div
+                      ref={detailRef}
+                      className={`absolute inset-0 flex flex-col justify-center items-center text-center text-white px-2 transform transition-all duration-700 ease-in-out ${
+                        showDetail
+                          ? "translate-y-0 opacity-100"
+                          : "translate-y-full opacity-0"
+                      }`}
+                    >
+                      <p className="text-[11px] mt-2 drop-shadow-md max-w-[60%]">
+                        {agent.description}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Bottom gradient */}
                   <div
                     className="absolute bottom-0 left-1/2 -translate-x-1/2
                                w-full h-16 sm:h-20 xs:h-14

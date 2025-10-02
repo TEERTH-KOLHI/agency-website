@@ -22,7 +22,7 @@ export default function Header() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
-    { name: "Pricing", href: "/pricing" },
+    { name: "Contact Us", href: "/contactus" },
   ];
 
   return (
@@ -38,7 +38,7 @@ export default function Header() {
           className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide text-black"
           whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
         >
-          Pioneer Automation Agency
+          Pioneer
         </motion.h1>
 
         {/* Center links */}
