@@ -257,5 +257,19 @@
     "faq12Answer": "Onze AI-oplossingen zijn gebouwd met schaalbaarheid in gedachten. Ze kunnen gemakkelijk toegenomen volume, nieuwe bedrijfseisen, extra integraties en evoluerende processen aan naarmate uw bedrijf groeit en verandert.",
     "letsTalk": "Laten we praten.",
     "freeConsultation": "Boek een gratis consultatie"
+  },
+
+  "companyName": "PIONEER AUTOMATISERINGSBUREAU",
+  "privacyPolicy": "Privacybeleid",
+  "contactUs": "Neem Contact Op",
+  "copyright": "© 2025 Pioneer Automatiseringsbureau. Alle rechten voorbehouden.",
+  "modalTitle": "Neem Contact Op",
+  "form": {
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-mail",
+    "message": "Uw Bericht",
+    "fileAttachment": "Bestand Bijvoegen",
+    "submit": "Verzenden"
   }
 }

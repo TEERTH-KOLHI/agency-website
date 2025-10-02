@@ -257,5 +257,19 @@
     "faq12Answer": "Our AI solutions are built with scalability in mind. They can easily handle increased volume, new business requirements, additional integrations, and evolving processes as your business grows and changes.",
     "letsTalk": "Let's talk.",
     "freeConsultation": "Book a free consultation"
+  },
+
+  "companyName": "PIONEER AUTOMATION AGENCY",
+  "privacyPolicy": "Privacy Policy",
+  "contactUs": "Contact Us",
+  "copyright": "© 2025 Pioneer Automation Agency. All rights reserved.",
+  "modalTitle": "Contact Us",
+  "form": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "message": "Your Message",
+    "fileAttachment": "Attach a file",
+    "submit": "Submit"
   }
 }

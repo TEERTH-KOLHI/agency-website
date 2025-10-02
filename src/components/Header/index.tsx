@@ -6,15 +6,24 @@ import { Globe, Menu, X } from "lucide-react";
 import i18n from "../../../i18n";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { t } = useTranslation();
   const [language, setLanguage] = useState("nl"); // default Dutch
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     i18n.changeLanguage(language);
   }, [language]);
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Blog", href: "/blog" },
+    { name: "Pricing", href: "/pricing" },
+  ];
 
   return (
     <motion.header
@@ -23,8 +32,8 @@ export default function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="flex items-center justify-between relative">
-        {/* Logo / Title */}
+      <div className="flex items-center justify-between relative w-full">
+        {/* Logo on the left */}
         <motion.h1
           className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide text-black"
           whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
@@ -32,8 +41,23 @@ export default function Header() {
           Pioneer Automation Agency
         </motion.h1>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-4">
+        {/* Center links */}
+        <div className="hidden md:flex space-x-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`text-gray-800 hover:text-black font-medium transition-colors duration-200 ${
+                pathname === link.href ? "text-purple-500" : ""
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+
+        {/* Language selector on the right */}
+        <div className="hidden md:flex">
           <motion.div
             className="flex items-center space-x-2 bg-white border border-black rounded-full px-2 py-1 shadow-sm"
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
@@ -95,7 +119,22 @@ export default function Header() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="flex items-center space-x-2">
+          {/* Mobile links */}
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`text-gray-800 hover:text-black font-medium transition-colors duration-200 ${
+                pathname === link.href ? "text-purple-500" : ""
+              }`}
+              onClick={() => setMenuOpen(false)} // close menu on click
+            >
+              {link.name}
+            </Link>
+          ))}
+
+          {/* Mobile language selector */}
+          <div className="flex items-center space-x-2 mt-2">
             <Globe className="w-4 h-4 text-black" />
             <div className="flex space-x-2">
               {["nl", "en"].map((lang) => (
@@ -113,10 +152,6 @@ export default function Header() {
               ))}
             </div>
           </div>
-
-          {/* Add links here if needed */}
-          {/* Example: */}
-          {/* <Link href="/about" className="text-gray-800 hover:text-black">About</Link> */}
         </motion.div>
       )}
     </motion.header>
