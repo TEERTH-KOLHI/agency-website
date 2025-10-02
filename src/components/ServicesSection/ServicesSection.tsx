@@ -3,7 +3,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Phone, MessageSquare, Settings, PhoneCall, Bot, Workflow } from "lucide-react";
+import {
+  Phone,
+  MessageSquare,
+  Settings,
+  PhoneCall,
+  Bot,
+  Workflow,
+} from "lucide-react";
 
 const ServicesSection: React.FC = () => {
   const { t } = useTranslation();
@@ -18,8 +25,8 @@ const ServicesSection: React.FC = () => {
         "vocalchat.service1Feature2",
         "vocalchat.service1Feature3",
         "vocalchat.service1Feature4",
-        "vocalchat.service1Feature5"
-      ]
+        "vocalchat.service1Feature5",
+      ],
     },
     {
       icon: Bot,
@@ -30,8 +37,8 @@ const ServicesSection: React.FC = () => {
         "vocalchat.service2Feature2",
         "vocalchat.service2Feature3",
         "vocalchat.service2Feature4",
-        "vocalchat.service2Feature5"
-      ]
+        "vocalchat.service2Feature5",
+      ],
     },
     {
       icon: Workflow,
@@ -42,9 +49,9 @@ const ServicesSection: React.FC = () => {
         "vocalchat.service3Feature2",
         "vocalchat.service3Feature3",
         "vocalchat.service3Feature4",
-        "vocalchat.service3Feature5"
-      ]
-    }
+        "vocalchat.service3Feature5",
+      ],
+    },
   ];
 
   return (
@@ -56,12 +63,12 @@ const ServicesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-black text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-black text-3xl md:text-4xl font-bold mb-4">
             {t("vocalchat.customSolutions")}
-          </h2>
+          </h1>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -72,11 +79,15 @@ const ServicesSection: React.FC = () => {
             >
               <service.icon className="w-16 h-16 text-black mb-6" />
 
-              <h3 className="text-black text-xl font-bold mb-2">{t(service.titleKey)}</h3>
+              <h3 className="text-black text-[16px] font-bold mb-2">
+                {t(service.titleKey)}
+              </h3>
 
-              <p className="text-gray-700 mb-6 leading-relaxed">{t(service.subtitleKey)}</p>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                {t(service.subtitleKey)}
+              </p>
 
-              <button className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors mb-6 w-full">
+              <button className="w-full mb-6 px-6 py-2 rounded-lg border border-black bg-black text-white text-sm font-medium hover:bg-transparent hover:text-black transition-all duration-300 cursor-pointer">
                 {t("vocalchat.bookCall").toUpperCase()}
               </button>
 

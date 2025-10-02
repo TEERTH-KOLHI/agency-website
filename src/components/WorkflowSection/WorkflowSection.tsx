@@ -89,7 +89,7 @@ const WorkflowSection: React.FC = () => {
       titleKey: "vocalchat.step1Title",
       descKey: "vocalchat.step1Desc",
       number: "01",
-      image: "/images/workflow/1.jpeg",
+      image: "/images/workflow/1.png",
     },
     {
       titleKey: "vocalchat.step2Title",
@@ -107,7 +107,7 @@ const WorkflowSection: React.FC = () => {
       titleKey: "vocalchat.step4Title",
       descKey: "vocalchat.step4Desc",
       number: "04",
-      image: "/images/workflow/4.jpeg",
+      image: "/images/workflow/4.png",
     },
   ];
 
@@ -115,23 +115,28 @@ const WorkflowSection: React.FC = () => {
     <div className="bg-white py-16">
       {/* Benefits Section */}
       <section className="max-w-6xl mx-auto px-4 mb-20">
-        <motion.h2
+        <motion.h1
           className="text-black text-3xl md:text-4xl font-bold text-center mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           {t("vocalchat.perfectWorkflow")}
-        </motion.h2>
+        </motion.h1>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
-              className="text-center p-6 rounded-2xl border border-gray-200 bg-white/30 shadow-md backdrop-blur-sm"
+              className="text-center p-6 rounded-2xl border border-gray-200 bg-white/30 shadow-md backdrop-blur-sm cursor-pointer"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{
+                scale: 1.05,
+                y: -5,
+                boxShadow: "0px 15px 25px rgba(0,0,0,0.2)",
+              }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
             >
               <benefit.icon className="w-12 h-12 text-black mx-auto mb-4" />
               <h3 className="text-black text-lg font-bold mb-2">
@@ -145,14 +150,14 @@ const WorkflowSection: React.FC = () => {
 
       {/* Workflow Process */}
       <section className="max-w-6xl mx-auto px-4">
-        <motion.h2
+        <motion.h1
           className="text-black text-3xl md:text-4xl font-bold text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           {t("vocalchat.fullyAutomated")}
-        </motion.h2>
+        </motion.h1>
 
         <div className="space-y-12">
           {workflowSteps.map((step, index) => (
@@ -164,7 +169,7 @@ const WorkflowSection: React.FC = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
               <div className={`flex-1 ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                <div className="bg-gray-50 rounded-2xl p-8">
+                <div className="bg-gray-50 rounded-2xl p-8 cursor-pointer hover:shadow-lg transition-shadow duration-300">
                   <div className="flex items-center gap-4 mb-4">
                     <span className="text-3xl font-bold text-black bg-white rounded-full w-12 h-12 flex items-center justify-center">
                       {step.number}
@@ -180,15 +185,22 @@ const WorkflowSection: React.FC = () => {
               </div>
 
               <div className={`flex-1 ${index % 2 === 1 ? "md:order-1" : ""}`}>
-                <div className="rounded-2xl p-8 bg-transparent">
-                  <div className="w-full h-48 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img
+                <motion.div
+                  className="rounded-2xl p-10 bg-transparent"
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="w-full h-50 rounded-lg flex items-center justify-center overflow-hidden">
+                    <motion.img
                       src={step.image}
                       alt={t(step.titleKey)}
                       className="w-full h-full object-cover rounded-lg shadow-lg"
+                      initial={{ scale: 1 }}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
                     />
                   </div>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}

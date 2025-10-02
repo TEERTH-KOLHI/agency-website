@@ -30,9 +30,9 @@ export default function RootLayout({
             font-family: 'SUSE Mono', monospace;
             color: black; /* visible in light mode */
           }
-          body {
-            font-family: 'SUSE Mono', monospace;
-          }
+          // body {
+          //   font-family: 'SUSE Mono', monospace;
+          // }
         `}</style>
       </head>
       <body className="antialiased bg-white">

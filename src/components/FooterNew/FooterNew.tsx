@@ -12,7 +12,9 @@ const FooterNew: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between mb-8">
           {/* Company Name */}
           <div className="mb-4 md:mb-0">
-            <h3 className="text-black text-xl font-bold tracking-wider">PIONEER AGENCY</h3>
+            <h1 className="text-black text-xl font-bold tracking-wider">
+              PIONEER AGENCY
+            </h1>
           </div>
 
           {/* Navigation Links */}
@@ -25,7 +27,7 @@ const FooterNew: React.FC = () => {
             </Link>
 
             <motion.button
-              className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+              className="px-6 py-2 rounded-lg text-sm font-medium border border-black bg-black text-white hover:bg-transparent hover:text-black transition-all duration-300 cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

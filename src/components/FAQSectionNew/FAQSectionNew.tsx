@@ -21,7 +21,7 @@ const FAQSectionNew: React.FC = () => {
     { questionKey: "vocalchat.faq9", answerKey: "vocalchat.faq9Answer" },
     { questionKey: "vocalchat.faq10", answerKey: "vocalchat.faq10Answer" },
     { questionKey: "vocalchat.faq11", answerKey: "vocalchat.faq11Answer" },
-    { questionKey: "vocalchat.faq12", answerKey: "vocalchat.faq12Answer" }
+    { questionKey: "vocalchat.faq12", answerKey: "vocalchat.faq12Answer" },
   ];
 
   const toggleFAQ = (index: number) => {
@@ -37,9 +37,9 @@ const FAQSectionNew: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-black text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-black text-3xl md:text-4xl font-bold mb-4">
             {t("vocalchat.questionsTitle")}
-          </h2>
+          </h1>
         </motion.div>
 
         <div className="space-y-4">
@@ -55,7 +55,9 @@ const FAQSectionNew: React.FC = () => {
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="text-black font-medium text-lg">{t(faq.questionKey)}</span>
+                <span className="text-black font-medium text-lg">
+                  {t(faq.questionKey)}
+                </span>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
@@ -74,7 +76,9 @@ const FAQSectionNew: React.FC = () => {
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-4">
-                      <p className="text-gray-700 leading-relaxed">{t(faq.answerKey)}</p>
+                      <p className="text-gray-700 leading-relaxed">
+                        {t(faq.answerKey)}
+                      </p>
                     </div>
                   </motion.div>
                 )}

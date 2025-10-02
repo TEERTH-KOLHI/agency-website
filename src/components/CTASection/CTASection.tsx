@@ -15,16 +15,16 @@ const CTASection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-black text-3xl md:text-4xl font-bold mb-8">
+          <h1 className="text-black text-3xl md:text-4xl font-bold mb-8">
             {t("vocalchat.letsTalk")}
-          </h2>
+          </h1>
 
           <p className="text-black text-xl mb-8">
             {t("vocalchat.freeConsultation")}
           </p>
 
           <motion.button
-            className="bg-black text-white px-12 py-4 rounded-lg text-xl font-medium hover:bg-gray-800 transition-colors"
+            className="px-8 py-2 rounded-lg text-xl font-medium border border-black bg-black text-white hover:bg-transparent hover:text-black transition-all duration-300 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

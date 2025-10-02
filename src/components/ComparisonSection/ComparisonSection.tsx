@@ -19,96 +19,89 @@ export default function ComparisonSection() {
   ];
 
   return (
-    <div className="min-h-screen bg-white py-16 px-8 flex items-center justify-center">
-      <div className="max-w-6xl w-full">
+    <div className="min-h-screen bg-gray-50 py-5 px-4 sm:px-8 flex flex-col items-center justify-center">
+      <div className="max-w-7xl w-full">
         {/* Header */}
-        <div className="flex justify-between items-start mb-16">
-          <div>
-            <h1 className="text-6xl font-bold leading-tight">
-              <span className="text-gray-900">Vocalchat AI </span>
-              <span className="text-purple-500">vs.</span>
-              <br />
-              <span className="text-gray-900">Traditional Hiring</span>
-            </h1>
-          </div>
-          <button className="flex items-center gap-2 px-5 py-2.5 border-2 border-black rounded-lg text-black font-medium hover:bg-gray-50 transition-all">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-24 mb-5 text-center lg:text-left">
+          <h1 className="text-2xl sm:text-3xl font-bold leading-tight text-gray-800">
+            Vocalchat AI <span className="text-purple-500">vs.</span>
+            <br />
+            Traditional Hiring
+          </h1>
+          <button className="flex items-center gap-2 px-5 py-2.5 border border-black rounded-md bg-black text-white text-sm font-medium hover:bg-transparent hover:text-black transition-all duration-300 cursor-pointer">
             Book a Call
             <Phone className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Comparison Container - Centered */}
-        <div className="flex justify-center items-start gap-8">
-          {/* Left Side - VocalChat AI with Purple Glow */}
-          <div className="w-full max-w-md relative">
-            {/* Purple glow background */}
-            <div className="absolute -inset-6 bg-gradient-to-br from-purple-300 via-purple-200 to-blue-200 rounded-[3rem] blur-2xl opacity-40"></div>
-
-            {/* Dark Card */}
-            <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl p-8 shadow-2xl">
-              {/* Icon Section */}
-              <div className="bg-gray-800/50 backdrop-blur rounded-2xl p-5 mb-8 flex items-center justify-center">
-                <div className="relative">
+        {/* Comparison Container */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 sm:gap-8 lg:gap-16 border border-white/20 rounded-2xl shadow-md shadow-black/10 bg-transparent backdrop-blur-sm p-4 lg:p-6 mx-auto w-full lg:w-[900px]">
+          {/* Left Side - VocalChat AI */}
+          <div className="flex-shrink-0">
+            <div className="bg-gradient-to-br from-purple-200 via-purple-150 to-purple-100 rounded-2xl p-4 inline-block">
+              <div className="bg-black rounded-xl p-5 w-64 sm:w-72 lg:w-[260px]">
+                {/* Icon Section */}
+                <div className="bg-gray-900 rounded-lg py-3 px-4 mb-5 flex items-center justify-center">
                   <svg
-                    className="w-12 h-12 text-purple-500"
-                    viewBox="0 0 48 48"
+                    className="w-7 h-7 text-purple-500"
+                    viewBox="0 0 40 40"
                     fill="none"
                   >
-                    <path
-                      d="M24 8L24 40M8 24L40 24"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
                     <circle
-                      cx="24"
-                      cy="24"
-                      r="18"
+                      cx="20"
+                      cy="20"
+                      r="14"
                       stroke="currentColor"
-                      strokeWidth="3"
+                      strokeWidth="2.5"
+                    />
+                    <circle cx="20" cy="20" r="6" fill="currentColor" />
+                    <path
+                      d="M20 6v8M20 26v8M6 20h8M26 20h8"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
                     />
                   </svg>
                 </div>
-              </div>
 
-              {/* Features */}
-              <div className="space-y-5">
-                {vocalchatFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className="mt-0.5">
+                {/* Features */}
+                <div className="space-y-3">
+                  {vocalchatFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-start gap-2">
                       <Check
-                        className="w-6 h-6 text-green-400"
+                        className="w-4 h-4 text-white mt-0.5 flex-shrink-0"
                         strokeWidth={2.5}
                       />
+                      <span className="text-white text-sm font-normal">
+                        {feature}
+                      </span>
                     </div>
-                    <span className="text-white text-lg font-normal leading-relaxed">
-                      {feature}
-                    </span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
           {/* Right Side - Traditional */}
-          <div className="w-full max-w-md pt-2">
-            {/* Traditional Badge - Centered */}
-            <div className="flex justify-center mb-8">
-              <div className="inline-flex items-center justify-center px-8 py-2.5 bg-white border-2 border-gray-200 rounded-full shadow-sm">
-                <span className="text-gray-800 font-medium text-base">
+          <div className="flex-shrink-0 pt-2 w-64 sm:w-72 lg:w-[260px]">
+            {/* Traditional Badge */}
+            <div className="mb-6 flex justify-center lg:justify-start">
+              <div className="inline-flex items-center px-4 py-1.5 bg-white border border-gray-300 rounded-full">
+                <span className="text-gray-800 text-xs font-medium">
                   Traditional
                 </span>
               </div>
             </div>
 
             {/* Limitations */}
-            <div className="space-y-5">
+            <div className="space-y-3">
               {traditionalLimitations.map((limitation, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="mt-0.5">
-                    <X className="w-6 h-6 text-red-500" strokeWidth={2.5} />
-                  </div>
-                  <span className="text-gray-600 text-lg font-normal leading-relaxed">
+                <div key={index} className="flex items-start gap-2">
+                  <X
+                    className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0"
+                    strokeWidth={2.5}
+                  />
+                  <span className="text-gray-700 text-sm font-normal">
                     {limitation}
                   </span>
                 </div>
