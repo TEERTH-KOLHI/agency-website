@@ -18,7 +18,7 @@ export default function ComparisonSection() {
     <div className="min-h-screen bg-gray-50 py-5 px-4 sm:px-8 flex flex-col items-center justify-center">
       <div className="max-w-7xl w-full">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-start gap-6 lg:gap-84 mb-5 text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-center items-center lg:items-center gap-6 lg:gap-90 mb-5 text-center lg:text-left">
           <h1 className="text-2xl sm:text-3xl font-bold leading-tight text-gray-800">
             {t("comparison.header.part1")}{" "}
             <span className="text-purple-500">vs.</span>
@@ -34,7 +34,7 @@ export default function ComparisonSection() {
         {/* Comparison Container */}
         <div className="flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-16 border border-white/20 rounded-2xl shadow-md shadow-black/10 bg-transparent backdrop-blur-sm p-4 lg:p-6 mx-auto w-full lg:max-w-[1000px]">
           {/* Left Side - VocalChat AI */}
-          <div className="flex-1">
+          <div className="flex-1 mb-6 lg:mb-0">
             <div className="bg-gradient-to-br from-purple-200 via-purple-150 to-purple-100 rounded-2xl p-4">
               <div className="bg-black rounded-xl p-5 w-full">
                 {/* Icon Section */}
@@ -62,7 +62,7 @@ export default function ComparisonSection() {
                 </div>
 
                 {/* Features */}
-                <div className="space-y-3 overflow-x-auto">
+                <div className="space-y-3 overflow-x-visible">
                   {vocalchatFeatures.map((feature, index) => (
                     <div
                       key={index}
@@ -83,7 +83,7 @@ export default function ComparisonSection() {
           </div>
 
           {/* Right Side - Traditional */}
-          <div className="flex-1 pt-2">
+          <div className="flex-1 pt-2 mt-4 md:mt-0 lg:mt-0">
             {/* Traditional Badge */}
             <div className="mb-6 flex justify-center lg:justify-start">
               <div className="inline-flex items-center px-4 py-1.5 bg-white border border-gray-300 rounded-full">
@@ -94,7 +94,7 @@ export default function ComparisonSection() {
             </div>
 
             {/* Limitations */}
-            <div className="space-y-3 overflow-x-auto">
+            <div className="space-y-3 overflow-x-visible">
               {traditionalLimitations.map((limitation, index) => (
                 <div
                   key={index}
