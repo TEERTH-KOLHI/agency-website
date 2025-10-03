@@ -8,6 +8,7 @@ import {
   Pause,
   ArrowRight,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const agents = [
   {
@@ -96,6 +97,7 @@ const agents = [
 ];
 
 const VocalChatAgentCarousel = () => {
+  const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
@@ -195,7 +197,7 @@ const VocalChatAgentCarousel = () => {
              transition-all duration-200 cursor-pointer
              flex items-center gap-1"
                     >
-                      <span>Learn More</span>
+                      <span>{t("learnMore")}</span>
                       <ArrowRight size={12} strokeWidth={2} />
                     </button>
                   )}

@@ -75,7 +75,7 @@ export default function Header() {
                 <motion.button
                   key={lang}
                   onClick={() => setLanguage(lang)}
-                  className={`px-2 py-0.5 text-xs sm:text-sm rounded-full transition-all ${
+                  className={`px-2 py-0.5 text-xs sm:text-sm rounded-full transition-all cursor-pointer ${
                     language === lang
                       ? "bg-black text-white font-semibold"
                       : "text-gray-600 hover:text-black"
@@ -114,7 +114,7 @@ export default function Header() {
       {/* Mobile Menu */}
       {menuOpen && (
         <motion.div
-          className="md:hidden mt-2 flex flex-col gap-2 bg-white border-t border-gray-200 px-4 py-4 rounded-md shadow-lg"
+          className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-200 px-4 py-4 shadow-lg z-50"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
@@ -124,7 +124,7 @@ export default function Header() {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-gray-800 hover:text-black font-medium transition-colors duration-200 ${
+              className={`block text-gray-800 hover:text-black font-medium transition-colors duration-200 ${
                 pathname === link.href ? "text-purple-500" : ""
               }`}
               onClick={() => setMenuOpen(false)} // close menu on click
