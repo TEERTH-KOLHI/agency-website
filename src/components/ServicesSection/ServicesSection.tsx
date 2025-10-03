@@ -63,7 +63,7 @@ const ServicesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-black text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-black text-3xl md:text-3xl font-bold mb-4">
             {t("vocalchat.customSolutions")}
           </h1>
         </motion.div>

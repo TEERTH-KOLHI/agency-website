@@ -52,7 +52,7 @@ const FAQSectionNew: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors cursor-pointer"
                 onClick={() => toggleFAQ(index)}
               >
                 <span className="text-black font-medium text-lg">

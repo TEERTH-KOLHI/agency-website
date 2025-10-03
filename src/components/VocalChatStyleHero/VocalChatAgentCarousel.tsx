@@ -13,11 +13,11 @@ import { useTranslation } from "react-i18next";
 const agents = [
   {
     id: 1,
-    src: "images/ai-voice/Selena.png",
-    audio: "audio/ai-voice/Selena.mpeg",
-    name: "Selena",
-    role: "AI Customer Support",
-    description: "Selena handles real-time queries with empathy and accuracy.",
+    src: "images/ai-voice/Carla.png",
+    audio: "audio/ai-voice/Carla.mpeg",
+    name: "Carla",
+    role: "Support Agent",
+    description: "Carla ensures customers always receive timely assistance.",
   },
   {
     id: 2,
@@ -88,11 +88,11 @@ const agents = [
   },
   {
     id: 10,
-    src: "images/ai-voice/Carla.png",
-    audio: "audio/ai-voice/Carla.mpeg",
-    name: "Carla",
-    role: "Support Agent",
-    description: "Carla ensures customers always receive timely assistance.",
+    src: "images/ai-voice/Selena.png",
+    audio: "audio/ai-voice/Selena.mpeg",
+    name: "Selena",
+    role: "AI Customer Support",
+    description: "Selena handles real-time queries with empathy and accuracy.",
   },
 ];
 
