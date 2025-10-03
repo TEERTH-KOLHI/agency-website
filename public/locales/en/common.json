@@ -458,5 +458,54 @@
       "Varies by employee"
     ]
   },
-  "learnMore": "Learn More"
+  "learnMore": "Learn More",
+  "flowchart": {
+    "title": "How AI Agent Grows Your Business",
+    "challenges": {
+      "title": "YOUR CHALLENGES:",
+      "missedCalls": "Missed calls = Lost revenue",
+      "staffBusy": "Staff too busy for follow-ups",
+      "noAvailability": "No 24/7 availability"
+    },
+    "solution": {
+      "title": "AI AGENT SOLUTION",
+      "subtitle": "Handles Every Customer Interaction Automatically",
+      "features": "24/7 • Multi-language • Never Misses a Call"
+    },
+    "results": {
+      "title": "YOUR RESULTS:",
+      "moreLeads": "More leads captured",
+      "higherConversion": "Higher conversion rates",
+      "increasedRevenue": "Increased revenue"
+    },
+    "capabilities": "COMPLETE SERVICE CAPABILITIES",
+    "categories": {
+      "leadGeneration": "LEAD GENERATION",
+      "scheduling1": "SCHEDULING &",
+      "scheduling2": "COORDINATION",
+      "sales1": "SALES &",
+      "sales2": "OPERATIONS"
+    },
+    "services": {
+      "leadCapture": "Lead Capture",
+      "coldCalling": "Cold Calling",
+      "warmCalling": "Warm Calling",
+      "qualificationCalls": "Qualification Calls",
+      "objectionHandling": "Objection Handling",
+      "followUps": "Follow-ups",
+      "calendarSync": "Calendar Sync",
+      "meetingReminders": "Meeting Reminders",
+      "rescheduleCalls": "Reschedule Calls",
+      "callbackTrigger": "Callback Trigger",
+      "callTransfer": "Call Transfer",
+      "reminder": "Reminder",
+      "orderTaking": "Order Taking",
+      "contractConfirm": "Contract Confirm",
+      "dealUpdate": "Deal Update",
+      "welcomeCall": "Welcome Call",
+      "onboarding": "Onboarding",
+      "callRecording": "Call Recording"
+    },
+    "banner": "24/7 Availability • Multi-Language Support • Never Miss a Lead • ROI Guaranteed"
+  }
 }

@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Phone,
   Smartphone,
@@ -23,7 +24,23 @@ import {
 } from "lucide-react";
 
 export default function FlowChart() {
+  const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // Skip animations on mobile
+
     // Initial states
     const problem = document.getElementById("problem");
     const arrow1 = document.getElementById("arrow1");
@@ -73,7 +90,7 @@ export default function FlowChart() {
     setTimeout(() => {
       if (connections) connections.style.opacity = "0.3";
     }, 3000);
-  }, []);
+  }, [isMobile]);
 
   const ServiceCard = ({ icon: Icon, label }: { icon: any; label: string }) => (
     <div
@@ -157,6 +174,385 @@ export default function FlowChart() {
     </div>
   );
 
+  if (isMobile) {
+    return (
+      <>
+        <style>{`
+          @keyframes animate1 {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
+          }
+          @keyframes animate2 {
+            0% { top: -100%; }
+            50%, 100% { top: 100%; }
+          }
+          @keyframes animate3 {
+            0% { right: -100%; }
+            50%, 100% { right: 100%; }
+          }
+          @keyframes animate4 {
+            0% { bottom: -100%; }
+            50%, 100% { bottom: 100%; }
+          }
+        `}</style>
+
+        <section
+          style={{
+            background: "#ffffff",
+            padding: "20px",
+          }}
+        >
+          <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+            {/* Title */}
+            <h1
+              style={{
+                fontSize: "24px",
+                fontWeight: "bold",
+                textAlign: "center",
+                marginBottom: "30px",
+                color: "#000",
+              }}
+            >
+              {t("flowchart.title")}
+            </h1>
+
+            {/* Problem Section */}
+            <div
+              style={{
+                background: "#ffffff",
+                border: "2px solid #000",
+                borderRadius: "15px",
+                padding: "20px",
+                marginBottom: "20px",
+                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  marginBottom: "15px",
+                  color: "#000",
+                }}
+              >
+                {t("flowchart.challenges.title")}
+              </h2>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                <li style={{ marginBottom: "8px", color: "#000" }}>
+                  • {t("flowchart.challenges.missedCalls")}
+                </li>
+                <li style={{ marginBottom: "8px", color: "#000" }}>
+                  • {t("flowchart.challenges.staffBusy")}
+                </li>
+                <li style={{ color: "#000" }}>
+                  • {t("flowchart.challenges.noAvailability")}
+                </li>
+              </ul>
+            </div>
+
+            {/* Arrow Down */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                margin: "15px 0",
+              }}
+            >
+              <div
+                style={{
+                  width: "2px",
+                  height: "30px",
+                  background: "#000",
+                  position: "relative",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "-8px",
+                    left: "-4px",
+                    width: 0,
+                    height: 0,
+                    borderLeft: "5px solid transparent",
+                    borderRight: "5px solid transparent",
+                    borderTop: "10px solid #000",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Solution Section */}
+            <div
+              style={{
+                background: "#f8f8f8",
+                border: "3px solid #000",
+                borderRadius: "15px",
+                padding: "25px",
+                marginBottom: "20px",
+                boxShadow: "0 6px 12px rgba(0,0,0,0.15)",
+                textAlign: "center",
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                  marginBottom: "10px",
+                  color: "#000",
+                }}
+              >
+                {t("flowchart.solution.title")}
+              </h2>
+              <p
+                style={{ marginBottom: "8px", color: "#000", fontSize: "14px" }}
+              >
+                {t("flowchart.solution.subtitle")}
+              </p>
+              <p style={{ color: "#000", fontSize: "12px" }}>
+                {t("flowchart.solution.features")}
+              </p>
+            </div>
+
+            {/* Arrow Down */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                margin: "15px 0",
+              }}
+            >
+              <div
+                style={{
+                  width: "2px",
+                  height: "30px",
+                  background: "#000",
+                  position: "relative",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "-8px",
+                    left: "-4px",
+                    width: 0,
+                    height: 0,
+                    borderLeft: "5px solid transparent",
+                    borderRight: "5px solid transparent",
+                    borderTop: "10px solid #000",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Results Section */}
+            <div
+              style={{
+                background: "#ffffff",
+                border: "2px solid #000",
+                borderRadius: "15px",
+                padding: "20px",
+                marginBottom: "30px",
+                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  marginBottom: "15px",
+                  color: "#000",
+                }}
+              >
+                {t("flowchart.results.title")}
+              </h2>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                <li style={{ marginBottom: "8px", color: "#000" }}>
+                  ✓ {t("flowchart.results.moreLeads")}
+                </li>
+                <li style={{ marginBottom: "8px", color: "#000" }}>
+                  ✓ {t("flowchart.results.higherConversion")}
+                </li>
+                <li style={{ color: "#000" }}>
+                  ✓ {t("flowchart.results.increasedRevenue")}
+                </li>
+              </ul>
+            </div>
+
+            {/* Service Categories Title */}
+            <h2
+              style={{
+                fontSize: "18px",
+                fontWeight: "bold",
+                textAlign: "center",
+                marginBottom: "25px",
+                color: "#000",
+              }}
+            >
+              {t("flowchart.capabilities")}
+            </h2>
+
+            {/* Category 1: Lead Generation */}
+            <div
+              style={{
+                background: "#fafafa",
+                border: "2px solid #000",
+                borderRadius: "15px",
+                padding: "20px",
+                marginBottom: "20px",
+                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  marginBottom: "15px",
+                  color: "#000",
+                  textAlign: "center",
+                  background: "#e8e8e8",
+                  padding: "10px",
+                  borderRadius: "10px",
+                }}
+              >
+                {t("flowchart.categories.leadGeneration")}
+              </h3>
+              <div style={{ display: "grid", gap: "12px" }}>
+                {[
+                  { icon: Phone, key: "leadCapture" },
+                  { icon: Smartphone, key: "coldCalling" },
+                  { icon: PhoneCall, key: "warmCalling" },
+                  { icon: CheckCircle, key: "qualificationCalls" },
+                  { icon: MessageCircle, key: "objectionHandling" },
+                  { icon: RefreshCw, key: "followUps" },
+                ].map(({ icon, key }) => (
+                  <div key={key} style={{ height: "50px" }}>
+                    <ServiceCard
+                      icon={icon}
+                      label={t(`flowchart.services.${key}`)}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Category 2: Scheduling & Coordination */}
+            <div
+              style={{
+                background: "#fafafa",
+                border: "2px solid #000",
+                borderRadius: "15px",
+                padding: "20px",
+                marginBottom: "20px",
+                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  marginBottom: "15px",
+                  color: "#000",
+                  textAlign: "center",
+                  background: "#e8e8e8",
+                  padding: "10px",
+                  borderRadius: "10px",
+                }}
+              >
+                {t("flowchart.categories.scheduling1")}{" "}
+                {t("flowchart.categories.scheduling2")}
+              </h3>
+              <div style={{ display: "grid", gap: "12px" }}>
+                {[
+                  { icon: Calendar, key: "calendarSync" },
+                  { icon: Clock, key: "meetingReminders" },
+                  { icon: Repeat, key: "rescheduleCalls" },
+                  { icon: Timer, key: "callbackTrigger" },
+                  { icon: PhoneForwarded, key: "callTransfer" },
+                  { icon: Bell, key: "reminder" },
+                ].map(({ icon, key }) => (
+                  <div key={key} style={{ height: "50px" }}>
+                    <ServiceCard
+                      icon={icon}
+                      label={t(`flowchart.services.${key}`)}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Category 3: Sales & Operations */}
+            <div
+              style={{
+                background: "#fafafa",
+                border: "2px solid #000",
+                borderRadius: "15px",
+                padding: "20px",
+                marginBottom: "20px",
+                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  marginBottom: "15px",
+                  color: "#000",
+                  textAlign: "center",
+                  background: "#e8e8e8",
+                  padding: "10px",
+                  borderRadius: "10px",
+                }}
+              >
+                {t("flowchart.categories.sales1")}{" "}
+                {t("flowchart.categories.sales2")}
+              </h3>
+              <div style={{ display: "grid", gap: "12px" }}>
+                {[
+                  { icon: ShoppingCart, key: "orderTaking" },
+                  { icon: FileText, key: "contractConfirm" },
+                  { icon: Briefcase, key: "dealUpdate" },
+                  { icon: UserPlus, key: "welcomeCall" },
+                  { icon: Target, key: "onboarding" },
+                  { icon: Mic, key: "callRecording" },
+                ].map(({ icon, key }) => (
+                  <div key={key} style={{ height: "50px" }}>
+                    <ServiceCard
+                      icon={icon}
+                      label={t(`flowchart.services.${key}`)}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom Banner */}
+            <div
+              style={{
+                background: "#f0f0f0",
+                border: "2px solid #000",
+                borderRadius: "15px",
+                padding: "20px",
+                textAlign: "center",
+                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: "bold",
+                  color: "#000",
+                  margin: 0,
+                }}
+              >
+                {t("flowchart.banner")}
+              </p>
+            </div>
+          </div>
+        </section>
+      </>
+    );
+  }
+
   return (
     <>
       <style>{`
@@ -200,7 +596,7 @@ export default function FlowChart() {
               fontSize="32"
               fontWeight="bold"
             >
-              How AI Agent Grows Your Business
+              {t("flowchart.title")}
             </text>
 
             {/* Problem Section */}
@@ -224,7 +620,7 @@ export default function FlowChart() {
                 fontSize="18"
                 fontWeight="bold"
               >
-                YOUR CHALLENGES:
+                {t("flowchart.challenges.title")}
               </text>
               <text
                 x="200"
@@ -233,7 +629,7 @@ export default function FlowChart() {
                 fill="#000"
                 fontSize="14"
               >
-                • Missed calls = Lost revenue
+                • {t("flowchart.challenges.missedCalls")}
               </text>
               <text
                 x="200"
@@ -242,7 +638,7 @@ export default function FlowChart() {
                 fill="#000"
                 fontSize="14"
               >
-                • Staff too busy for follow-ups
+                • {t("flowchart.challenges.staffBusy")}
               </text>
               <text
                 x="200"
@@ -251,7 +647,7 @@ export default function FlowChart() {
                 fill="#000"
                 fontSize="14"
               >
-                • No 24/7 availability
+                • {t("flowchart.challenges.noAvailability")}
               </text>
             </g>
 
@@ -287,7 +683,7 @@ export default function FlowChart() {
                 fontSize="24"
                 fontWeight="bold"
               >
-                AI AGENT SOLUTION
+                {t("flowchart.solution.title")}
               </text>
               <text
                 x="700"
@@ -296,7 +692,7 @@ export default function FlowChart() {
                 fill="#000"
                 fontSize="16"
               >
-                Handles Every Customer Interaction Automatically
+                {t("flowchart.solution.subtitle")}
               </text>
               <text
                 x="700"
@@ -305,7 +701,7 @@ export default function FlowChart() {
                 fill="#000"
                 fontSize="14"
               >
-                24/7 • Multi-language • Never Misses a Call
+                {t("flowchart.solution.features")}
               </text>
             </g>
 
@@ -341,7 +737,7 @@ export default function FlowChart() {
                 fontSize="18"
                 fontWeight="bold"
               >
-                YOUR RESULTS:
+                {t("flowchart.results.title")}
               </text>
               <text
                 x="1200"
@@ -350,7 +746,7 @@ export default function FlowChart() {
                 fill="#000"
                 fontSize="14"
               >
-                ✓ More leads captured
+                ✓ {t("flowchart.results.moreLeads")}
               </text>
               <text
                 x="1200"
@@ -359,7 +755,7 @@ export default function FlowChart() {
                 fill="#000"
                 fontSize="14"
               >
-                ✓ Higher conversion rates
+                ✓ {t("flowchart.results.higherConversion")}
               </text>
               <text
                 x="1200"
@@ -368,7 +764,7 @@ export default function FlowChart() {
                 fill="#000"
                 fontSize="14"
               >
-                ✓ Increased revenue
+                ✓ {t("flowchart.results.increasedRevenue")}
               </text>
             </g>
 
@@ -381,7 +777,7 @@ export default function FlowChart() {
               fontSize="20"
               fontWeight="bold"
             >
-              COMPLETE SERVICE CAPABILITIES
+              {t("flowchart.capabilities")}
             </text>
 
             {/* Category 1: Lead Generation */}
@@ -415,17 +811,17 @@ export default function FlowChart() {
                 fontSize="18"
                 fontWeight="bold"
               >
-                LEAD GENERATION
+                {t("flowchart.categories.leadGeneration")}
               </text>
 
               {[
-                { icon: Phone, label: "Lead Capture" },
-                { icon: Smartphone, label: "Cold Calling" },
-                { icon: PhoneCall, label: "Warm Calling" },
-                { icon: CheckCircle, label: "Qualification Calls" },
-                { icon: MessageCircle, label: "Objection Handling" },
-                { icon: RefreshCw, label: "Follow-ups" },
-              ].map(({ icon, label }, i) => (
+                { icon: Phone, key: "leadCapture" },
+                { icon: Smartphone, key: "coldCalling" },
+                { icon: PhoneCall, key: "warmCalling" },
+                { icon: CheckCircle, key: "qualificationCalls" },
+                { icon: MessageCircle, key: "objectionHandling" },
+                { icon: RefreshCw, key: "followUps" },
+              ].map(({ icon, key }, i) => (
                 <foreignObject
                   key={i}
                   x="120"
@@ -433,7 +829,10 @@ export default function FlowChart() {
                   width="310"
                   height="50"
                 >
-                  <ServiceCard icon={icon} label={label} />
+                  <ServiceCard
+                    icon={icon}
+                    label={t(`flowchart.services.${key}`)}
+                  />
                 </foreignObject>
               ))}
             </g>
@@ -469,7 +868,7 @@ export default function FlowChart() {
                 fontSize="16"
                 fontWeight="bold"
               >
-                SCHEDULING &
+                {t("flowchart.categories.scheduling1")}
               </text>
               <text
                 x="700"
@@ -479,17 +878,17 @@ export default function FlowChart() {
                 fontSize="16"
                 fontWeight="bold"
               >
-                COORDINATION
+                {t("flowchart.categories.scheduling2")}
               </text>
 
               {[
-                { icon: Calendar, label: "Calendar Sync" },
-                { icon: Clock, label: "Meeting Reminders" },
-                { icon: Repeat, label: "Reschedule Calls" },
-                { icon: Timer, label: "Callback Trigger" },
-                { icon: PhoneForwarded, label: "Call Transfer" },
-                { icon: Bell, label: "Reminder" },
-              ].map(({ icon, label }, i) => (
+                { icon: Calendar, key: "calendarSync" },
+                { icon: Clock, key: "meetingReminders" },
+                { icon: Repeat, key: "rescheduleCalls" },
+                { icon: Timer, key: "callbackTrigger" },
+                { icon: PhoneForwarded, key: "callTransfer" },
+                { icon: Bell, key: "reminder" },
+              ].map(({ icon, key }, i) => (
                 <foreignObject
                   key={i}
                   x="545"
@@ -497,7 +896,10 @@ export default function FlowChart() {
                   width="310"
                   height="50"
                 >
-                  <ServiceCard icon={icon} label={label} />
+                  <ServiceCard
+                    icon={icon}
+                    label={t(`flowchart.services.${key}`)}
+                  />
                 </foreignObject>
               ))}
             </g>
@@ -533,7 +935,7 @@ export default function FlowChart() {
                 fontSize="16"
                 fontWeight="bold"
               >
-                SALES &
+                {t("flowchart.categories.sales1")}
               </text>
               <text
                 x="1125"
@@ -543,17 +945,17 @@ export default function FlowChart() {
                 fontSize="16"
                 fontWeight="bold"
               >
-                OPERATIONS
+                {t("flowchart.categories.sales2")}
               </text>
 
               {[
-                { icon: ShoppingCart, label: "Order Taking" },
-                { icon: FileText, label: "Contract Confirm" },
-                { icon: Briefcase, label: "Deal Update" },
-                { icon: UserPlus, label: "Welcome Call" },
-                { icon: Target, label: "Onboarding" },
-                { icon: Mic, label: "Call Recording" },
-              ].map(({ icon, label }, i) => (
+                { icon: ShoppingCart, key: "orderTaking" },
+                { icon: FileText, key: "contractConfirm" },
+                { icon: Briefcase, key: "dealUpdate" },
+                { icon: UserPlus, key: "welcomeCall" },
+                { icon: Target, key: "onboarding" },
+                { icon: Mic, key: "callRecording" },
+              ].map(({ icon, key }, i) => (
                 <foreignObject
                   key={i}
                   x="970"
@@ -561,7 +963,10 @@ export default function FlowChart() {
                   width="310"
                   height="50"
                 >
-                  <ServiceCard icon={icon} label={label} />
+                  <ServiceCard
+                    icon={icon}
+                    label={t(`flowchart.services.${key}`)}
+                  />
                 </foreignObject>
               ))}
             </g>
@@ -675,8 +1080,7 @@ export default function FlowChart() {
               fontSize="18"
               fontWeight="bold"
             >
-              24/7 Availability • Multi-Language Support • Never Miss a Lead •
-              ROI Guaranteed
+              {t("flowchart.banner")}
             </text>
 
             <defs>

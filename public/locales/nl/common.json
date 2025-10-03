@@ -458,5 +458,54 @@
       "Verschilt per medewerker"
     ]
   },
-  "learnMore": "Meer informatie"
+  "learnMore": "Meer informatie",
+  "flowchart": {
+    "title": "Hoe AI-Agent Uw Bedrijf Laat Groeien",
+    "challenges": {
+      "title": "UW UITDAGINGEN:",
+      "missedCalls": "Gemiste oproepen = Verloren omzet",
+      "staffBusy": "Personeel te druk voor opvolging",
+      "noAvailability": "Geen 24/7 beschikbaarheid"
+    },
+    "solution": {
+      "title": "AI AGENT OPLOSSING",
+      "subtitle": "Handelt Elke Klantinteractie Automatisch Af",
+      "features": "24/7 • Meertalig • Mist Nooit een Oproep"
+    },
+    "results": {
+      "title": "UW RESULTATEN:",
+      "moreLeads": "Meer leads vastgelegd",
+      "higherConversion": "Hogere conversiepercentages",
+      "increasedRevenue": "Verhoogde omzet"
+    },
+    "capabilities": "VOLLEDIGE SERVICE MOGELIJKHEDEN",
+    "categories": {
+      "leadGeneration": "LEADGENERATIE",
+      "scheduling1": "PLANNING &",
+      "scheduling2": "COÖRDINATIE",
+      "sales1": "VERKOOP &",
+      "sales2": "OPERATIES"
+    },
+    "services": {
+      "leadCapture": "Lead Vastleggen",
+      "coldCalling": "Cold Calling",
+      "warmCalling": "Warm Calling",
+      "qualificationCalls": "Kwalificatie Gesprekken",
+      "objectionHandling": "Bezwaarverwerking",
+      "followUps": "Opvolging",
+      "calendarSync": "Agenda Synchronisatie",
+      "meetingReminders": "Vergader Herinneringen",
+      "rescheduleCalls": "Gesprekken Herplannen",
+      "callbackTrigger": "Terugbel Trigger",
+      "callTransfer": "Oproep Doorschakelen",
+      "reminder": "Herinnering",
+      "orderTaking": "Bestellingen Opnemen",
+      "contractConfirm": "Contract Bevestiging",
+      "dealUpdate": "Deal Update",
+      "welcomeCall": "Welkomstgesprek",
+      "onboarding": "Onboarding",
+      "callRecording": "Gespreksopname"
+    },
+    "banner": "24/7 Beschikbaarheid • Meertalige Ondersteuning • Mis Nooit een Lead • ROI Gegarandeerd"
+  }
 }
