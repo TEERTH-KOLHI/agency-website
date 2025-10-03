@@ -38,7 +38,7 @@ export default function Header() {
           className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide text-black"
           whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
         >
-          Pioneer
+          Pionier
         </motion.h1>
 
         {/* Center links */}

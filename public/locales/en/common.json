@@ -1,7 +1,7 @@
 {
-  "title": "Pioneer Automation Agency",
+  "title": "Pionier Automation Agency",
   "button": "GET STARTED TODAY",
-  "welcome": "Welcome to Pioneer Automation Agency!",
+  "welcome": "Welcome to Pionier Automation Agency!",
   "students": "⭐⭐⭐⭐⭐ 100+ Automation Experts",
   "heroTitle": "Scale Your Business with AI-Powered Voice Agents & Automation Solutions",
   "heroSubtitle": "Transform your operations with our 100+ experts specializing in Voice AI, CRM automations, social media integrations, and custom solutions. We've automated 150+ businesses across diverse industries with proven results.",
@@ -38,23 +38,23 @@
   "course5Desc": "Tailored AI implementations including chatbots, data analysis tools, predictive systems, and machine learning solutions designed for your specific business needs.",
   "course6Title": "Expert Implementation",
   "course6Desc": "Our team of 100+ experts handles complete setup, testing, and optimization of all automation systems with ongoing support and maintenance included.",
-  "aboutFounder": "About Pioneer Automation",
+  "aboutFounder": "About Pionier Automation",
   "earlyLifeTitle": "OUR STORY",
-  "nathanName": "Pioneer Automation Agency",
+  "nathanName": "Pionier Automation Agency",
   "earlyLifeDesc1Part1": "is a",
   "earlyLifeDesc1Part2": "leading automation and AI solutions provider",
   "earlyLifeDesc1Part3": ", specializing in Voice AI agents, CRM automations, and business process optimization. With a proven track record of automating",
   "earlyLifeAgency": "150+ businesses",
   "earlyLifeDesc1Part4": "across diverse industries, our success speaks for itself.",
   "earlyLifeDesc2": "Our team of 100+ experts combines cutting-edge AI technology with deep business automation expertise, making us the go-to choice for companies looking to scale operations, reduce costs, and improve customer experiences through intelligent automation solutions.",
-  "nathanLaptopAlt": "Pioneer team working on automation solutions",
+  "nathanLaptopAlt": "Pionier team working on automation solutions",
   "luxuryCarAlt": "Business success through automation",
   "heroButton": "Get Started Today",
-  "howWeCompare": "Why Choose Pioneer Automation?",
+  "howWeCompare": "Why Choose Pionier Automation?",
   "grandmasCourseTitle": "Real Results, Real Expertise",
   "grandmasCourseSubTitle": "Unlike others, we actively automate 150+ businesses with proven Voice AI and CRM solutions!",
   "traditionalGurusTitle": "Other Agencies",
-  "stealMyAgencyTitle": "Pioneer Automation Agency",
+  "stealMyAgencyTitle": "Pionier Automation Agency",
   "traditionalGurus": [
     "Generic one-size-fits-all solutions",
     "Limited expertise in Voice AI",
@@ -78,7 +78,7 @@
       "id": "1",
       "name": "Sarah Mitchell",
       "avatar": "https://randomuser.me/api/portraits/women/32.jpg",
-      "review": "Pioneer's Voice AI agents handle 80% of our customer calls now. We've reduced response time from hours to seconds and our customer satisfaction scores went up 40%!",
+      "review": "Pionier's Voice AI agents handle 80% of our customer calls now. We've reduced response time from hours to seconds and our customer satisfaction scores went up 40%!",
       "rating": 5
     },
     {
@@ -99,7 +99,7 @@
       "id": "4",
       "name": "Mark Johnson",
       "avatar": "https://randomuser.me/api/portraits/men/68.jpg",
-      "review": "From appointment booking to customer support, everything runs automatically now. Pioneer's team delivered exactly what they promised - pure excellence!",
+      "review": "From appointment booking to customer support, everything runs automatically now. Pionier's team delivered exactly what they promised - pure excellence!",
       "rating": 5
     }
   ],
@@ -108,7 +108,7 @@
   "communitySubtitle": "Connect with 100+ automation experts",
   "expertise": "Expertise",
 
-  "earlyLifeDescription1": "<strong>Pioneer Automation Agency</strong> is a <strong>leading automation and AI solutions provider</strong>, specializing in Voice AI agents, CRM automations, and business process optimization. With a proven track record of automating <strong>150+ businesses</strong> across diverse industries, our success speaks for itself.",
+  "earlyLifeDescription1": "<strong>Pionier Automation Agency</strong> is a <strong>leading automation and AI solutions provider</strong>, specializing in Voice AI agents, CRM automations, and business process optimization. With a proven track record of automating <strong>150+ businesses</strong> across diverse industries, our success speaks for itself.",
   "earlyLifeDescription2": "Our team of 100+ experts combines cutting-edge AI technology with deep business automation expertise, making us the go-to choice for companies looking to scale operations, reduce costs, and improve customer experiences through intelligent automation solutions.",
   "grandmasTitle": "Real Results, Real Expertise",
   "grandmasSubtitle": "Unlike others, we actively automate 150+ businesses with proven Voice AI and CRM solutions!",
@@ -116,11 +116,11 @@
   "faq": {
     "header": "FAQs",
     "title": "FREQUENTLY <br /> ASKED QUESTIONS",
-    "question1": "What services does Pioneer Automation Agency provide?",
+    "question1": "What services does Pionier Automation Agency provide?",
     "answer1": "We specialize in Voice AI agents, CRM automations, social media integrations, business process automation, and custom AI solutions. Our 100+ experts handle everything from setup to ongoing optimization.",
     "question2": "How quickly can you implement automation solutions?",
     "answer2": "Implementation timelines vary by complexity, but most Voice AI agents and CRM automations are live within 2-4 weeks. We provide ongoing support and optimization throughout the process.",
-    "question3": "What makes Pioneer different from other automation agencies?",
+    "question3": "What makes Pionier different from other automation agencies?",
     "answer3": "We have 100+ specialized experts, proven experience with 150+ automated businesses, expert-level GoHighLevel snapshots, and focus specifically on Voice AI agents with human-like conversations.",
     "question4": "Do you offer custom pricing and payment plans?",
     "answer4": "Yes, we offer flexible pricing based on your specific automation needs and business size. Contact us for a custom quote and available payment options.",
@@ -134,14 +134,14 @@
     "centerText": "Contact Us",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "copyright": "© Pioneer Automation Agency {{year}}. All rights reserved.",
+    "copyright": "© Pionier Automation Agency {{year}}. All rights reserved.",
     "designedBy": "Designed by Prashant Dagar"
   },
   "membersSection": {
     "members": "Members"
   },
   "vocalchat": {
-    "companyName": "PIONEER AUTOMATION AGENCY",
+    "companyName": "PIONIER AUTOMATION AGENCY",
     "bookCall": "Book a Call",
     "heroTitle": "Innovative AI Solutions for \n Forward Thinking \n Businesses",
     "heroSubtitle": "Grow your business while our AI experts \n manage voice agents, CRM, and custom workflows.",
@@ -193,8 +193,8 @@
     "step3Desc": "All interactions sync with your CRM, update pipelines, and trigger relevant automations.",
     "step4Title": "Instant Resolution",
     "step4Desc": "AI closes inquiries fast, reducing wait times and lost leads.",
-    "vsTitle": "Pioneer Agency AI vs. Traditional Methods",
-    "pioneerAI": "Pioneer Agency AI",
+    "vsTitle": "Pionier Agency AI vs. Traditional Methods",
+    "pioneerAI": "Pionier Agency AI",
     "traditional": "Traditional",
     "feature1": "24/7, never off duty",
     "feature2": "Instant responses, no delays",
@@ -231,7 +231,7 @@
     "service3Feature4": "Recommendations for tools & integrations",
     "service3Feature5": "Follow-up strategy session for execution",
     "questionsTitle": "Questions you may have",
-    "faq1": "What exactly does Pioneer Agency do?",
+    "faq1": "What exactly does Pionier Agency do?",
     "faq1Answer": "We specialize in creating custom AI automation solutions for businesses. This includes voice agents, CRM integrations, workflow automation, social media management, and custom AI implementations tailored to your specific business needs.",
     "faq2": "How do you ensure the AI doesn't mess up important processes?",
     "faq2Answer": "We implement multiple layers of quality control including testing phases, fallback protocols, human oversight options, and continuous monitoring. All AI systems are thoroughly tested before deployment and include escalation paths for complex scenarios.",
@@ -259,10 +259,10 @@
     "freeConsultation": "Book a free consultation"
   },
 
-  "companyName": "PIONEER AUTOMATION AGENCY",
+  "companyName": "PIONIER AUTOMATION AGENCY",
   "privacyPolicy": "Privacy Policy",
   "contactUs": "Contact Us",
-  "copyright": "© 2025 Pioneer Automation Agency. All rights reserved.",
+  "copyright": "© 2025 Pionier Automation Agency. All rights reserved.",
   "modalTitle": "Contact Us",
   "form": {
     "firstName": "First Name",
@@ -324,7 +324,7 @@
         "position": "CEO, TechFlow Solutions",
         "company": "TechFlow Solutions",
         "rating": 4.5,
-        "review": " Pioneer has revolutionized our customer support. The AI handles 95% of inquiries autonomously, allowing our team to focus on strategic initiatives.",
+        "review": " Pionier has revolutionized our customer support. The AI handles 95% of inquiries autonomously, allowing our team to focus on strategic initiatives.",
         "image": "https://randomuser.me/api/portraits/women/44.jpg",
         "initials": "SC",
         "bgColor": "from-gray-600 to-gray-400"
@@ -357,7 +357,7 @@
         "position": "Director of Customer Success",
         "company": "ScaleUp Dynamics",
         "rating": 4.5,
-        "review": "Pioneer's AI agents understand context better than any solution we've tried. The natural conversations have impressed both our team and customers.",
+        "review": "Pionier's AI agents understand context better than any solution we've tried. The natural conversations have impressed both our team and customers.",
         "image": "https://randomuser.me/api/portraits/men/22.jpg",
         "initials": "DP",
         "bgColor": "from-gray-200 to-gray-100"
@@ -379,7 +379,7 @@
         "position": "Founder & CEO",
         "company": "NextGen Solutions",
         "rating": 5,
-        "review": "From setup to ongoing support, the Pioneer team exceeded expectations. The AI continuously learns and improves our customer experience.",
+        "review": "From setup to ongoing support, the Pionier team exceeded expectations. The AI continuously learns and improves our customer experience.",
         "image": "https://randomuser.me/api/portraits/men/17.jpg",
         "initials": "JW",
         "bgColor": "from-gray-200 to-gray-100"
@@ -401,7 +401,7 @@
         "position": "Head of Customer Experience",
         "company": "CloudTech Solutions",
         "rating": 5,
-        "review": "Pioneer seamlessly integrated with our existing CRM. The deployment was smooth and the results exceeded our highest expectations.",
+        "review": "Pionier seamlessly integrated with our existing CRM. The deployment was smooth and the results exceeded our highest expectations.",
         "image": "https://randomuser.me/api/portraits/women/32.jpg",
         "initials": "JM",
         "bgColor": "from-gray-200 to-gray-100"
@@ -412,7 +412,7 @@
         "position": "VP of Technology",
         "company": "InnovateTech Corp",
         "rating": 4.5,
-        "review": "The scalability and performance are outstanding. From 100 to 10,000+ conversations per day - Pioneer handled it flawlessly.",
+        "review": "The scalability and performance are outstanding. From 100 to 10,000+ conversations per day - Pionier handled it flawlessly.",
         "image": "https://randomuser.me/api/portraits/men/56.jpg",
         "initials": "RK",
         "bgColor": "from-gray-200 to-gray-100"
@@ -433,7 +433,7 @@
 
   "comparison": {
     "header": {
-      "part1": "Pioneer Automation",
+      "part1": "Pionier Automation",
       "part2": "Traditional Hiring"
     },
     "bookCall": "Book a Call",
