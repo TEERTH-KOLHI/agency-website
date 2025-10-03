@@ -74,7 +74,7 @@ const industryData = [
 ];
 
 const IndustrySolutions = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const [isPausedRow1, setIsPausedRow1] = useState(false);
   const [isPausedRow2, setIsPausedRow2] = useState(false);
 
@@ -147,10 +147,10 @@ const IndustrySolutions = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-black mb-4">
-             {t("Industry Solutions")} 
+              {t("Industry Solutions")}
             </h1>
             <p className="text-gray-600 text-lg">
-             {t("Transform your business with our AI-powered solutions.")} 
+              {t("Transform your business with our AI-powered solutions.")}
             </p>
           </div>
 
@@ -168,17 +168,16 @@ const IndustrySolutions = () => {
                   width: `${320 * extendedRow1.length}px`,
                 }}
               >
-               {extendedRow1.map((industry, index) => (
-    <IndustryCard
-     key={`row1-${index}`}
-       industry={{
-         ...industry,
-         title: t(industry.title),
-        description: t(industry.description),
-      }}
-    />
-       ))}
-
+                {extendedRow1.map((industry, index) => (
+                  <IndustryCard
+                    key={`row1-${index}`}
+                    industry={{
+                      ...industry,
+                      title: t(industry.title),
+                      description: t(industry.description),
+                    }}
+                  />
+                ))}
               </div>
             </div>
 
@@ -194,17 +193,16 @@ const IndustrySolutions = () => {
                   width: `${320 * extendedRow2.length}px`,
                 }}
               >
-               {extendedRow2.map((industry, index) => (
-  <IndustryCard
-    key={`row2-${index}`}
-    industry={{
-      ...industry,
-      title: t(industry.title),
-      description: t(industry.description),
-    }}
-  />
-))}
-
+                {extendedRow2.map((industry, index) => (
+                  <IndustryCard
+                    key={`row2-${index}`}
+                    industry={{
+                      ...industry,
+                      title: t(industry.title),
+                      description: t(industry.description),
+                    }}
+                  />
+                ))}
               </div>
             </div>
           </div>

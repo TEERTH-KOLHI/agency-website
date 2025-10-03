@@ -976,87 +976,87 @@ export default function FlowChart() {
               <path
                 d="M 430 395 L 545 395"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
               <path
                 d="M 430 460 L 545 460"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
               <path
                 d="M 430 525 L 545 525"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
               <path
                 d="M 430 590 L 545 590"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
               <path
                 d="M 430 655 L 545 655"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
               <path
                 d="M 430 720 L 545 720"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
 
               <path
                 d="M 855 395 L 970 395"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
               <path
                 d="M 855 460 L 970 460"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
               <path
                 d="M 855 525 L 970 525"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
               <path
                 d="M 855 590 L 970 590"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
               <path
                 d="M 855 655 L 970 655"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
               <path
                 d="M 855 720 L 970 720"
                 stroke="#000"
-                strokeWidth="1"
+                strokeWidth="3"
                 strokeDasharray="5,5"
-                opacity="0.4"
+                opacity="1"
               />
             </g>
 
