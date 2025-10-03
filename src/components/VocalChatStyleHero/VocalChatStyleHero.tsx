@@ -50,6 +50,11 @@ const VocalChatStyleHero: React.FC = () => {
               {t("vocalchat.heroSubtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+              <button className="liquid-btn">
+                <span>{t("vocalchat.learnMore")}</span>
+                <div className="liquid"></div>
+              </button>
+
               <style jsx>{`
                 .liquid-btn {
                   color: #e0dadaff;
@@ -66,12 +71,14 @@ const VocalChatStyleHero: React.FC = () => {
                   background: white;
                   border: none;
                 }
+
                 .liquid-btn span {
                   position: relative;
                   z-index: 1;
                   color: #0e0d0dff;
                   transition: color 0.3s;
                 }
+
                 .liquid {
                   position: absolute;
                   top: -60px;
@@ -83,6 +90,7 @@ const VocalChatStyleHero: React.FC = () => {
                   z-index: 0;
                   transition: 0.6s;
                 }
+
                 .liquid::after,
                 .liquid::before {
                   position: absolute;
@@ -93,20 +101,23 @@ const VocalChatStyleHero: React.FC = () => {
                   left: 0;
                   transform: translate(-25%, -75%);
                 }
+
                 .liquid::after {
                   border-radius: 45%;
                   background: rgba(222, 217, 217, 1);
                   box-shadow: 0 0 10px 5px #0080ff, inset 0 0 5px #0080ff;
-                  animation: animate 5s linear infinite;
+                  animation: animate 15s linear infinite; /* slower flow */
                   opacity: 0.8;
                 }
+
                 .liquid::before {
                   border-radius: 40%;
                   box-shadow: 0 0 10px rgba(241, 235, 235, 0.96),
                     inset 0 0 5px rgba(244, 239, 239, 0.83);
                   background: rgba(246, 241, 241, 0.89);
-                  animation: animate 7s linear infinite;
+                  animation: animate 20s linear infinite; /* slower background wave */
                 }
+
                 @keyframes animate {
                   0% {
                     transform: translate(-25%, -75%) rotate(0);
@@ -115,22 +126,21 @@ const VocalChatStyleHero: React.FC = () => {
                     transform: translate(-25%, -75%) rotate(360deg);
                   }
                 }
+
                 .liquid-btn:hover .liquid {
                   top: -120px;
                 }
+
                 .liquid-btn:hover span {
                   color: #fff;
                 }
+
                 .liquid-btn:hover {
                   box-shadow: 0 0 5px #0080ff, inset 0 0 5px #0080ff;
                   transition-delay: 0.2s;
                 }
-              `}</style>{" "}
-              <button className="liquid-btn">
-                {" "}
-                <span>{t("vocalchat.learnMore")}</span>{" "}
-                <div className="liquid"></div>{" "}
-              </button>{" "}
+              `}</style>
+
               <button className="cursor-pointer bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-[8px] text-sm sm:text-base font-medium shadow-lg border border-black hover:bg-[#7cd5f2] hover:text-black transition">
                 {t("vocalchat.bookCall")}
               </button>
