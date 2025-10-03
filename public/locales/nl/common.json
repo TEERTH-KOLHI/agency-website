@@ -324,7 +324,7 @@
         "position": "CEO, TechFlow Solutions",
         "company": "TechFlow Solutions",
         "rating": 4.5,
-        "review": "NaturalFlow.ai heeft onze klantenservice getransformeerd. De AI behandelt 95% van de vragen autonoom, waardoor ons team zich kan concentreren op strategische initiatieven.",
+        "review": "Pioneer heeft onze klantenservice getransformeerd. De AI behandelt 95% van de vragen autonoom, waardoor ons team zich kan concentreren op strategische initiatieven.",
         "image": "https://randomuser.me/api/portraits/women/44.jpg",
         "initials": "SC",
         "bgColor": "from-gray-600 to-gray-400"
@@ -357,7 +357,7 @@
         "position": "Director Customer Success",
         "company": "ScaleUp Dynamics",
         "rating": 4.5,
-        "review": "De AI-agenten van NaturalFlow begrijpen context beter dan welke oplossing we ook geprobeerd hebben. De natuurlijke gesprekken hebben zowel ons team als klanten verbaasd.",
+        "review": "De AI-agenten van Pioneer begrijpen context beter dan welke oplossing we ook geprobeerd hebben. De natuurlijke gesprekken hebben zowel ons team als klanten verbaasd.",
         "image": "https://randomuser.me/api/portraits/men/22.jpg",
         "initials": "DP",
         "bgColor": "from-gray-200 to-gray-100"
@@ -379,7 +379,7 @@
         "position": "Oprichter & CEO",
         "company": "NextGen Solutions",
         "rating": 5,
-        "review": "Van setup tot doorlopende ondersteuning, het NaturalFlow-team overtrof de verwachtingen. De AI leert continu en verbetert onze klantervaring.",
+        "review": "Van setup tot doorlopende ondersteuning, het Pioneer-team overtrof de verwachtingen. De AI leert continu en verbetert onze klantervaring.",
         "image": "https://randomuser.me/api/portraits/men/17.jpg",
         "initials": "JW",
         "bgColor": "from-gray-200 to-gray-100"
@@ -401,7 +401,7 @@
         "position": "Hoofd Klantbeleving",
         "company": "CloudTech Solutions",
         "rating": 5,
-        "review": "NaturalFlow is naadloos geïntegreerd met ons bestaande CRM. De implementatie verliep soepel en de resultaten overtroffen onze hoogste verwachtingen.",
+        "review": "Pioneer is naadloos geïntegreerd met ons bestaande CRM. De implementatie verliep soepel en de resultaten overtroffen onze hoogste verwachtingen.",
         "image": "https://randomuser.me/api/portraits/women/32.jpg",
         "initials": "JM",
         "bgColor": "from-gray-200 to-gray-100"
@@ -412,7 +412,7 @@
         "position": "VP Technologie",
         "company": "InnovateTech Corp",
         "rating": 4.5,
-        "review": "De schaalbaarheid en prestaties zijn uitstekend. Van 100 tot 10.000+ gesprekken per dag – NaturalFlow heeft dit feilloos afgehandeld.",
+        "review": "De schaalbaarheid en prestaties zijn uitstekend. Van 100 tot 10.000+ gesprekken per dag – Pioneer heeft dit feilloos afgehandeld.",
         "image": "https://randomuser.me/api/portraits/men/56.jpg",
         "initials": "RK",
         "bgColor": "from-gray-200 to-gray-100"
@@ -433,7 +433,7 @@
 
   "comparison": {
     "header": {
-      "part1": "Pionier Automatisering",
+      "part1": "Pioneer Automatisering",
       "part2": "Traditionele Aanwerving"
     },
     "bookCall": "Boek een Gesprek",
