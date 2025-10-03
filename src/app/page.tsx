@@ -4,17 +4,19 @@ import ComparisonSection from "@/components/ComparisonSection/ComparisonSection"
 import ServicesSection from "@/components/ServicesSection/ServicesSection";
 import FAQSectionNew from "@/components/FAQSectionNew/FAQSectionNew";
 import CTASection from "@/components/CTASection/CTASection";
-import { AdvancedAiFeatures } from "@/components/AdvancedAiFeatures/AdvancedAiFeatures";
 import Review from "@/components/Review/review";
+import IndustrySolutions from "@/components/industry-solutions/industry-solutions";
+import FlowChart from "@/components/FlowChart/FlowChart";
 
 export default function Home() {
   return (
     <div>
       <VocalChatStyleHero />
+      <FlowChart />
       <WorkflowSection />
-      <AdvancedAiFeatures />
       <ComparisonSection />
       <ServicesSection />
+      <IndustrySolutions />
       <FAQSectionNew />
       <Review />
       <CTASection />

@@ -18,6 +18,7 @@ import {
   Settings,
 } from "lucide-react";
 import WorkflowProcess from "./WorkflowProcess";
+import { AdvancedAiFeatures } from "../AdvancedAiFeatures/AdvancedAiFeatures";
 
 const WorkflowSection: React.FC = () => {
   const { t } = useTranslation();
@@ -148,6 +149,8 @@ const WorkflowSection: React.FC = () => {
           ))}
         </div>
       </section>
+
+      <AdvancedAiFeatures />
 
       {/* Workflow Process Section */}
       <WorkflowProcess steps={workflowSteps} />
