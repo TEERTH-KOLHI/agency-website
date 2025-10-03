@@ -507,5 +507,38 @@
       "callRecording": "Gespreksopname"
     },
     "banner": "24/7 Beschikbaarheid • Meertalige Ondersteuning • Mis Nooit een Lead • ROI Gegarandeerd"
-  }
+  },
+
+  "Industry Solutions": "Oplossingen per sector",
+  "Transform your business with our AI-powered solutions.": "Transformeer uw bedrijf met onze AI-gedreven oplossingen.",
+
+  "Real Estate": "Vastgoed",
+  "Transform your property business with intelligent automation": "Transformeer uw vastgoedbedrijf met intelligente automatisering",
+
+  "Healthcare": "Gezondheidszorg",
+  "Enhance patient care with AI-powered communication": "Verbeter de patiëntenzorg met AI-gestuurde communicatie",
+
+  "E-commerce": "E-commerce",
+  "Boost sales with personalized shopping experiences": "Verhoog de verkoop met gepersonaliseerde winkelervaringen",
+
+  "Financial Services": "Financiële diensten",
+  "Streamline client interactions with secure AI assistance": "Stroomlijn klantinteracties met veilige AI-ondersteuning",
+
+  "Professional Services": "Professionele diensten",
+  "Elevate client relationships with intelligent automation": "Versterk klantrelaties met intelligente automatisering",
+
+  "Non-Profit": "Non-profit",
+  "Maximize impact with AI-driven donor engagement": "Maximaliseer de impact met AI-gestuurde donateurbetrokkenheid",
+
+  "Education": "Onderwijs",
+  "Revolutionize learning with AI-powered communication": "Revolutioneer leren met AI-gestuurde communicatie",
+
+  "Travel & Hospitality": "Reizen & Gastvrijheid",
+  "Enhance guest experiences with intelligent automation": "Verbeter de gastervaring met intelligente automatisering",
+
+  "Retail": "Detailhandel",
+  "Drive customer loyalty with personalized AI interactions": "Vergroot klantloyaliteit met gepersonaliseerde AI-interacties",
+
+  "Legal Services": "Juridische diensten",
+  "Optimize client communication with secure AI solutions": "Optimaliseer klantcommunicatie met veilige AI-oplossingen"
 }

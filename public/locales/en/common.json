@@ -507,5 +507,38 @@
       "callRecording": "Call Recording"
     },
     "banner": "24/7 Availability • Multi-Language Support • Never Miss a Lead • ROI Guaranteed"
-  }
+  },
+
+  "Industry Solutions": "Industry Solutions",
+  "Transform your business with our AI-powered solutions.": "Transform your business with our AI-powered solutions.",
+
+  "Real Estate": "Real Estate",
+  "Transform your property business with intelligent automation": "Transform your property business with intelligent automation",
+
+  "Healthcare": "Healthcare",
+  "Enhance patient care with AI-powered communication": "Enhance patient care with AI-powered communication",
+
+  "E-commerce": "E-commerce",
+  "Boost sales with personalized shopping experiences": "Boost sales with personalized shopping experiences",
+
+  "Financial Services": "Financial Services",
+  "Streamline client interactions with secure AI assistance": "Streamline client interactions with secure AI assistance",
+
+  "Professional Services": "Professional Services",
+  "Elevate client relationships with intelligent automation": "Elevate client relationships with intelligent automation",
+
+  "Non-Profit": "Non-Profit",
+  "Maximize impact with AI-driven donor engagement": "Maximize impact with AI-driven donor engagement",
+
+  "Education": "Education",
+  "Revolutionize learning with AI-powered communication": "Revolutionize learning with AI-powered communication",
+
+  "Travel & Hospitality": "Travel & Hospitality",
+  "Enhance guest experiences with intelligent automation": "Enhance guest experiences with intelligent automation",
+
+  "Retail": "Retail",
+  "Drive customer loyalty with personalized AI interactions": "Drive customer loyalty with personalized AI interactions",
+
+  "Legal Services": "Legal Services",
+  "Optimize client communication with secure AI solutions": "Optimize client communication with secure AI solutions"
 }

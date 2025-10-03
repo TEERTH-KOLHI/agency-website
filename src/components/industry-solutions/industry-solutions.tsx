@@ -13,63 +13,64 @@ import {
 const industryData = [
   {
     id: 1,
-    title: "Real Estate",
+    titleKey: "Real Estate",
     icon: <Building2 className="w-8 h-8" />,
-    description: "Transform your property business with intelligent automation",
+    descriptionKey:
+      "Transform your property business with intelligent automation",
   },
   {
     id: 2,
-    title: "Healthcare",
+    titleKey: "Healthcare",
     icon: <Heart className="w-8 h-8" />,
-    description: "Enhance patient care with AI-powered communication",
+    descriptionKey: "Enhance patient care with AI-powered communication",
   },
   {
     id: 3,
-    title: "E-commerce",
+    titleKey: "E-commerce",
     icon: <ShoppingCart className="w-8 h-8" />,
-    description: "Boost sales with personalized shopping experiences",
+    descriptionKey: "Boost sales with personalized shopping experiences",
   },
   {
     id: 4,
-    title: "Financial Services",
+    titleKey: "Financial Services",
     icon: <CreditCard className="w-8 h-8" />,
-    description: "Streamline client interactions with secure AI assistance",
+    descriptionKey: "Streamline client interactions with secure AI assistance",
   },
   {
     id: 5,
-    title: "Professional Services",
+    titleKey: "Professional Services",
     icon: <Briefcase className="w-8 h-8" />,
-    description: "Elevate client relationships with intelligent automation",
+    descriptionKey: "Elevate client relationships with intelligent automation",
   },
   {
     id: 6,
-    title: "Non-Profit",
+    titleKey: "Non-Profit",
     icon: <Heart className="w-8 h-8" />,
-    description: "Maximize impact with AI-driven donor engagement",
+    descriptionKey: "Maximize impact with AI-driven donor engagement",
   },
   {
     id: 7,
-    title: "Education",
+    titleKey: "Education",
     icon: <Building2 className="w-8 h-8" />,
-    description: "Revolutionize learning with AI-powered communication",
+    descriptionKey: "Revolutionize learning with AI-powered communication",
   },
   {
     id: 8,
-    title: "Travel & Hospitality",
+    titleKey: "Travel & Hospitality",
     icon: <Briefcase className="w-8 h-8" />,
-    description: "Enhance guest experiences with intelligent automation",
+    descriptionKey: "Enhance guest experiences with intelligent automation",
   },
   {
     id: 9,
-    title: "Retail",
+    titleKey: "Retail",
     icon: <ShoppingCart className="w-8 h-8" />,
-    description: "Drive customer loyalty with personalized AI interactions",
+    descriptionKey: "Drive customer loyalty with personalized AI interactions",
   },
   {
     id: 10,
-    title: "Legal Services",
+    titleKey: "Legal Services",
     icon: <CreditCard className="w-8 h-8" />,
-    description: "Optimize client communication with secure AI solutions",
+    descriptionKey: "Optimize client communication with secure AI solutions",
   },
 ];
 
@@ -78,11 +79,11 @@ const IndustrySolutions = () => {
   const [isPausedRow1, setIsPausedRow1] = useState(false);
   const [isPausedRow2, setIsPausedRow2] = useState(false);
 
-  // Split data into two rows
+  // Split into two rows
   const row1Data = industryData.slice(0, 5);
   const row2Data = industryData.slice(5, 10);
 
-  // Duplicate data for seamless looping
+  // Duplicate for looping
   const extendedRow1 = [...row1Data, ...row1Data, ...row1Data];
   const extendedRow2 = [...row2Data, ...row2Data, ...row2Data];
 
@@ -97,10 +98,12 @@ const IndustrySolutions = () => {
           <div className="relative p-6 h-full flex flex-col justify-between z-10">
             <div className="flex items-center gap-4 mb-4">
               <div className="text-primary-500">{industry.icon}</div>
-              <h3 className="text-xl font-bold text-black">{industry.title}</h3>
+              <h3 className="text-xl font-bold text-black">
+                {t(industry.titleKey)}
+              </h3>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              {industry.description}
+              {t(industry.descriptionKey)}
             </p>
           </div>
         </div>
@@ -156,7 +159,7 @@ const IndustrySolutions = () => {
 
           {/* Animated Slider Rows */}
           <div className="space-y-4">
-            {/* Row 1 - Moving Left to Right */}
+            {/* Row 1 */}
             <div className="relative overflow-hidden">
               <div
                 className={`flex animate-slide-left-to-right ${
@@ -164,24 +167,15 @@ const IndustrySolutions = () => {
                 }`}
                 onMouseEnter={() => setIsPausedRow1(true)}
                 onMouseLeave={() => setIsPausedRow1(false)}
-                style={{
-                  width: `${320 * extendedRow1.length}px`,
-                }}
+                style={{ width: `${320 * extendedRow1.length}px` }}
               >
                 {extendedRow1.map((industry, index) => (
-                  <IndustryCard
-                    key={`row1-${index}`}
-                    industry={{
-                      ...industry,
-                      title: t(industry.title),
-                      description: t(industry.description),
-                    }}
-                  />
+                  <IndustryCard key={`row1-${index}`} industry={industry} />
                 ))}
               </div>
             </div>
 
-            {/* Row 2 - Moving Right to Left */}
+            {/* Row 2 */}
             <div className="relative overflow-hidden">
               <div
                 className={`flex animate-slide-right-to-left ${
@@ -189,19 +183,10 @@ const IndustrySolutions = () => {
                 }`}
                 onMouseEnter={() => setIsPausedRow2(true)}
                 onMouseLeave={() => setIsPausedRow2(false)}
-                style={{
-                  width: `${320 * extendedRow2.length}px`,
-                }}
+                style={{ width: `${320 * extendedRow2.length}px` }}
               >
                 {extendedRow2.map((industry, index) => (
-                  <IndustryCard
-                    key={`row2-${index}`}
-                    industry={{
-                      ...industry,
-                      title: t(industry.title),
-                      description: t(industry.description),
-                    }}
-                  />
+                  <IndustryCard key={`row2-${index}`} industry={industry} />
                 ))}
               </div>
             </div>
